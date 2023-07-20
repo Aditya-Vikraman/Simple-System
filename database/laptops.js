@@ -17,7 +17,7 @@ const laptops = [
   storage: '512GB SSD (M.2, PCIe 4.0)',
   display: '16", FHD+, 165Hz (Anti-Glare, 350 nit)',
   price: 99990,
-  image: 'images/products/laptop/lenovo-ideapad-gaming-3i.jpg',
+  image: 'images/products/laptop/lenovo-ideapad-gaming-3i.JPG',
 },
 {
   name: 'Lenovo Legion Slim 5i 13th gen',
@@ -37,7 +37,7 @@ const laptops = [
   storage: '512GB SSD (PCIe 4.0 NVMe)',
   display: 'LCD, 15.6", FHD, 144Hz',
   price: 71000,
-  image: 'images/products/laptop/Acer-aspire-7-i5-rtx3050.jpg',
+  image: 'images/products/laptop/Acer-aspire-7-i5-rtx3050.JPG',
 },
 {
   name: 'Acer Nitro 5 (AN515-58-58TZ)',
@@ -87,7 +87,7 @@ const laptops = [
   storage: '512GB SSD (M.2, PCIe 4.0 NVMe)',
   display: '15.6", FHD, 144Hz (Anti-Glare, 250 nit)',
   price: 99000,
-  image: 'images/products/laptop/HP-victus-i7-rtx3050Ti.jpg',
+  image: 'images/products/laptop/HP-victus-i7-rtx3050ti.jpg',
 },
 {
   name: 'HP Victus 16 (e1060AX)',
