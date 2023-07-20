@@ -17,7 +17,7 @@ const laptops = [
   storage: '512GB SSD (M.2, PCIe 4.0)',
   display: '16", FHD+, 165Hz (Anti-Glare, 350 nit)',
   price: 99990,
-  image: 'images/products/laptop/lenovo-ideapad-gaming-3i.JPG',
+  image: 'images/products/laptop/lenovo-ideapad-gaming-3i.jpg',
 },
 {
   name: 'Lenovo Legion Slim 5i 13th gen',
@@ -27,7 +27,7 @@ const laptops = [
   storage: '512GB SSD (M.2, PCIe 4.0)',
   display: '16", FHD+, 144Hz (Anti-Glare, 300 nit)',
   price: 107700,
-  image: 'images/products/laptop/Lenovo-legion-slim-5i.jpg',
+  image: 'images/products/laptop/Lenovo-legion-slim-5i.JPG',
 },
 {
   name: 'Acer Aspire 7 (A715-76G)',
