@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Simple System
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/info-sidebar.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/info.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="home.html">
+          <img class="ss-logo" src="images/SS-logo.png">
+          <img class="ss-text" src="images/SS-text.png">
+        </a>
+      </div>
+
+      <a href="home.html">
+        <img class="search-icon" src="images/icons/search-icon-white.png">
+      </a>
+      <a class="info-button" href="info.html">
+        Info
+      </a>
+      <a class="build-button" href="build.html">
+        Build
+      </a>
+    </header>
+ 
+    <nav class="info-sidebar">
+      <div class="sidebar-link js-cpu">
+        <img src="images/icons/cpu-icon.png">
+        CPU
+      </div>
+      <div class="sidebar-link js-gpu">
+        <img src="images/icons/graphics-card-ion.png">
+        GPU
+      </div>
+      <div class="sidebar-link js-display">
+        <img src="images/icons/monitor-icon.png">
+        Display
+      </div>
+      <div class="sidebar-link js-memory-storage">
+        <img src="images/icons/memory-slot-icon.png">
+        Memory<br>
+        Storage
+      </div>
+      <div class="sidebar-link js-connectivity">
+        <img src="images/icons/connect-icon.png">
+        Connectivity
+      </div>
+    </nav>
+  
+    <main class="js-content">
+      <P>
+        This should give you the basic knowledge about various aspects of the hardware of a computer system, which you might find helpful when purchasing a new pc.
+      </P>
+      
+    </main>
+    <script src="page/info-cpu.js"></script>
+    <script src="page/info-gpu.js"></script>
+    <script src="page/info-display.js"></script>
+    <script src="page/info-memory-storage.js"></script>
+    <script src="page/info-connectivity.js"></script>
+    <script src="scripts/info.js"></script>
+  </body>
+</html>

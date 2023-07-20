@@ -1,0 +1,63 @@
+.header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  background-color: rgb(80, 80, 80);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 1000;
+}
+
+.logo {
+  flex: 1;
+  align-items: center;
+}
+
+.ss-logo {
+  width: 80px;
+  margin-top: 8px;
+}
+
+.ss-text {
+  width: 120px;
+}
+
+.search-icon {
+  background-color: rgb(80, 80, 80);
+  border-radius: 30px;
+  margin-right: 10px;
+  margin-top: 8px;
+  width: 35px;
+  cursor: pointer;
+  transition: width 0.15s;
+}
+
+.search-icon:hover {
+  width: 40px;
+}
+
+.info-button, .build-button {
+  font-family: arial;
+  font-size: 20px;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(80, 80, 80);
+  cursor: pointer;
+  transition: color 0.15s, backgroud-color 0.15s;
+}
+
+.info-button, .build-button a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.info-button:hover, .build-button:hover {
+  color: rgb(80, 80 ,80);
+  background-color: white;
+}

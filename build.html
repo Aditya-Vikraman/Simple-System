@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Simple System
+    </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/build.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="home.html">
+          <img class="ss-logo" src="images/SS-logo.png">
+          <img class="ss-text" src="images/SS-text.png">
+        </a>
+      </div>
+      
+      <a href="home.html">
+        <img class="search-icon" src="images/icons/search-icon-white.png">
+      </a>
+      <a class="info-button" href="info.html">
+          Info
+      </a>
+      <a class="build-button" href="build.html">
+          Build
+      </a>
+    </header>
+
+    <div class="build-sidebar">
+      <div class="motherboard-container sidebar-button">
+      </div>
+      <div class="cpu-container sidebar-button">
+      </div>
+      <div class="gpu-container sidebar-button">
+      </div>
+      <div class="storage-container sidebar-button">
+      </div>
+      <div class="ram-container sidebar-button">
+      </div>
+      <div class="psu-container sidebar-button">
+      </div>
+      <div class="cc-container sidebar-button">
+      </div>
+    </div>
+
+    <main>
+      <div class="build-grid">
+        <div class="section-1">
+          <p class="sub-heading">
+            Motherboard
+          </p>
+          <div class="options js-motherboard-options">
+          </div>
+      
+          <p class="sub-heading">
+            Processor (CPU)
+          </p>
+          <div class="options js-cpu-options">
+          </div>
+      
+          <P class="sub-heading">
+            Graphics Card (GPU)
+          </P>
+          <div class="options js-gpu-options">
+          </div>
+      
+          <p class="sub-heading">
+            Storage
+          </p>
+          <div class="options js-storage-options">
+          </div>
+      
+          <p class="sub-heading">
+            Memory (RAM)
+          </p>
+          <div class="options js-memory-options">
+          </div>
+      
+          <p class="sub-heading">
+            Power Supply (PSU)
+          </p>
+          <div class="options js-power-supply-options">
+          </div>
+      
+          <p class="sub-heading">
+            Case & Cooler
+          </p>
+          <div class="options js-case-cooler-options">
+          </div>
+        </div>
+        
+        <div>
+          <div class="section-2">
+            <p class="cost-title">
+              Cost Summary
+            </p>
+            <div class="js-section-2">
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="image-box">
+      </div>
+      
+    </main>
+    
+    <script src="database/motherboard.js"></script>
+    <script src="database/processor.js"></script>
+    <script src="database/grapics-card.js"></script>
+    <script src="database/storage.js"></script>
+    <script src="database/memory-ram.js"></script>
+    <script src="database/psu.js"></script>
+    <script src="database/case-cooler.js"></script>
+    <script src="scripts/build.js"></script>
+  </body>
+</html>

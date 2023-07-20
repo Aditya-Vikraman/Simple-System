@@ -1,0 +1,118 @@
+.js-produts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.product-container {
+  border: 1px solid rgb(200, 200, 200);
+  width: 510px;
+  display: inline-block;
+  margin: 0 40px 40px 0;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-rows: 210px 1fr;
+  justify-content: center;
+}
+
+.product-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.product-image-container img {
+  max-height: 209px;
+}
+
+.info-grid div {
+  display: flex;
+  border-bottom: 1px solid rgb(200, 200,200);
+  align-items: center;
+}
+.info-grid div p {
+  margin: 0;
+  padding: 2px 5px;
+}
+
+.laptop-name, .section, .js-price {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.laptop-name {
+  padding: 5px;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.section {
+  background-color: rgb(200, 200, 200);
+  margin: 0;
+  width: 65px;
+}
+
+.overlay {
+  background-color: rgba(200, 200, 200, 0.8);
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay img {
+  max-width: 100%;
+  max-height: 550px;
+}
+
+.close-button {
+  background-color: black;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.mail-icon-image {
+  width: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.mail-icon-image-container {
+  position: relative;
+}
+
+.mail-image {
+  width: 200px;
+}
+
+.info-pop {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.mail-image-container {
+  position: absolute;
+  top: -35px;
+  left: -200px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+}
+
+.mail-icon-image-container:hover .mail-image-container {
+  opacity: 1;
+}
