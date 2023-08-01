@@ -111,7 +111,7 @@ The Intel naming scheme starts with the processorcs brand—the overall product 
   <div class="segment">
     Laptop
   </div>
-  <div>
+  <div class="suffix-config">
     <div class="suffix-row">
       <div class="suffix">
       HX
@@ -173,7 +173,7 @@ The Intel naming scheme starts with the processorcs brand—the overall product 
   <div class="segment">
     Embedded
   </div>
-  <div>
+  <div class="suffix-config">
     <div class="suffix-row">
       <div class="suffix">
         E

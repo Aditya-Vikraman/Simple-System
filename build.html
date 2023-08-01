@@ -5,6 +5,8 @@
       Simple System
     </title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -22,16 +24,21 @@
           <img class="ss-text" src="images/ss-text.png">
         </a>
       </div>
+
+      <div class="middle-section">
+      </div>
       
-      <a href="index.html">
-        <img class="search-icon" src="images/icons/search-icon-white.png">
-      </a>
-      <a class="info-button" href="info.html">
-          Info
-      </a>
-      <a class="build-button" href="build.html">
-          Build
-      </a>
+      <div class="right-section">
+        <a href="index.html">
+          <img class="search-icon" src="images/icons/search-icon-white.png">
+        </a>
+        <a class="info-button" href="info.html">
+            Info
+        </a>
+        <a class="build-button" href="build.html">
+            Build
+        </a>
+      </div>
     </header>
 
     <div class="build-sidebar">
@@ -57,6 +64,26 @@
           <p class="sub-heading">
             Motherboard
           </p>
+
+          <div class="selector">
+            <div class="selector-option">
+              <input class="cpu-selector-button" type="radio" name="cpu-selector" value="LGA-1700"
+              id="check1">
+              <div><b>Intel (12th & 13th gen)<br> LGA 1700</b></div>
+            </div>
+            <div class="selector-option">
+              <input class="cpu-selector-button" type="radio" name="cpu-selector" value="AM5"
+              id="ckeck2">
+              <div><b>AMD (7th gen)<br> AM5</b></div>
+            </div>
+            <div class="selector-option">
+              <input class="cpu-selector-button" type="radio" name="cpu-selector" value="AM4"
+              id="ckeck3">
+              <div><b>AMD (5th gen)<br> AM4</b></div>
+            </div>
+            
+          </div>
+          
           <div class="options js-motherboard-options">
           </div>
       
@@ -69,18 +96,60 @@
           <P class="sub-heading">
             Graphics Card (GPU)
           </P>
+          <div class="selector">
+            <div class="selector-option">
+              <input class="gpu-selector-button" type="radio" name="gpu-selector" value="nvidia"
+              id="check1">
+              <div><b>NVIDIA</b></div>
+            </div>
+            <div class="selector-option">
+              <input class="gpu-selector-button" type="radio" name="gpu-selector" value="AMD"
+              id="ckeck2">
+              <div><b>AMD</b></div>
+            </div>
+          </div>
+         
           <div class="options js-gpu-options">
           </div>
       
           <p class="sub-heading">
             Storage
           </p>
+          <div class="selector">
+            <div class="selector-option">
+              <input class="storage-selector-button" type="radio" name="storage-selector" value="2-TB"
+              id="check1">
+              <div><b>2-TB</b></div>
+            </div>
+            <div class="selector-option">
+              <input class="storage-selector-button" type="radio" name="storage-selector" value="1-TB"
+              id="ckeck2">
+              <div><b>1-TB</b></div>
+            </div>
+            <div class="selector-option">
+              <input class="storage-selector-button" type="radio" name="storage-selector" value="500-GB"
+              id="ckeck2">
+              <div><b>500-GB</b></div>
+            </div>
+          </div>
           <div class="options js-storage-options">
           </div>
       
           <p class="sub-heading">
             Memory (RAM)
           </p>
+          <div class="selector">
+            <div class="selector-option">
+              <input class="ram-selector-button" type="radio" name="ram-selector" value="DDR5"
+              id="check1">
+              <div><b>DDR5</b></div>
+            </div>
+            <div class="selector-option">
+              <input class="gpu-selector-button" type="radio" name="ram-selector" value="DDR4"
+              id="ckeck2">
+              <div><b>DDR4</b></div>
+            </div>
+          </div>
           <div class="options js-memory-options">
           </div>
       

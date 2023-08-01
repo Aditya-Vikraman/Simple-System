@@ -2,6 +2,12 @@ p {
   margin-bottom: 10px;
 }
 
+@media (max-width: 575px) {
+  body {
+    padding-left: 100px;
+  }
+}
+
 .brand-photo-container, .processor-name-photo-container {
   display: flex;
   justify-content: center;
@@ -30,14 +36,16 @@ p {
 
 .intel-sku-suffix {
   display: grid;
-  grid-template-columns: 100px 1fr;
   border: 1px solid rgb(200, 200, 200);
-  padding: 10px 10px 0 10px;
+  padding: 0 10px 0 10px;
   max-width: 800px;
   margin-top: 20px;
   margin-bottom: 40px;
   margin-left: 10px;
-  margin-right: 50px;
+}
+
+.suffix-config{
+  border-bottom: 1px solid rgb(200, 200, 200);
 }
 
 .suffix-row {
@@ -85,5 +93,8 @@ p {
 .gpu-image-container {
 display: flex;
 justify-content:space-around;
-height: 150px;
+}
+
+.gpu-image-container img {
+  max-width: 150px;
 }

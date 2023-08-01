@@ -2,21 +2,21 @@ const motherboard = [
   {
     name: 'Asus Rog Strix Z690-E ',
     info: 'DDR5-4xDIMM-128GB-6400MHz/ PCIe 5.0/ WiFi 6E/ 2.5 Gb Ethernet ',
-    socket: 'LGA 1700 Socket ',
+    socket: 'LGA-1700 Socket ',
     price: 52500,
     image: 'images/products/motherboard/Asus-Z690-E.jpg',
   },
   {
     name: 'Gigabyte Z790M Aorus Elite AX ',
     info: 'DDR5-4XDIMM-198GB-7600MHz/ PCIe 4.0/ WiFi 6E/ 2.5 Gb Ethernet ',
-    socket: 'LGA 1700 Socket ',
+    socket: 'LGA-1700 Socket ',
     price: 31700,
     image: 'images/products/motherboard/Gigabyte-Z790M.jpg',
   },
   {
     name: 'Asus Prime Z790-P Wifi ',
     info: 'DDR5-4xDIMM-7200MHz/ PCIe 4.0 , 5.0/ WiFI 6E/ 2.5 Gb Ethernet ',
-    socket: 'LGA 1700 Socket ',
+    socket: 'LGA-1700 Socket ',
     formFactor: 'ATX ',
     price: 29800,
     image: 'images/products/motherboard/Asus-Z790-P.jpg',
@@ -24,7 +24,7 @@ const motherboard = [
   {
     name: 'Gigabyte B760 DS3H AC DDR4 ',
     info: 'DDR4-4xDIMM-128GB/ PCIe 4.0 ',
-    socket: 'LGA 1700 Socket ',
+    socket: 'LGA-1700 Socket ',
     formFactor: 'ATX ',
     price: 17000, 
     image: 'images/products/motherboard/Gigabyte-B760.jpg',
@@ -32,7 +32,7 @@ const motherboard = [
   {
     name: 'Gigabyte Aorus Z690 Tachyon ',
     info: 'DDR5-2xDIMM-5000MHz/ PCIe 5.0/ WiFi 6E/ 2.5 Gb Ethernet ',
-    socket: 'LGA 1700 Socket ',
+    socket: 'LGA-1700 Socket ',
     price: 18000,
     image: 'images/products/motherboard/Gigabyte-Z690.jpg'
   },

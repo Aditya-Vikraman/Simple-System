@@ -2,6 +2,7 @@
   font-family: Poppins;
   color: white;
   margin: 0;
+  line-height: 15px;
 }
 
 .info-sidebar {
@@ -13,6 +14,16 @@
   background-color: rgb(100, 100, 100);
   padding-top: 20px;
   cursor: pointer;
+}
+
+@media (max-width: 575px) {
+  .info-sidebar {
+    width: 100px;
+  }
+
+  .sidebar-link img {
+    width: 50px;
+  }
 }
 
 .sidebar-link {

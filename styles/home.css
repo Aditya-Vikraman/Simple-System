@@ -1,13 +1,24 @@
-.js-produts-container {
+.js-products-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
+@media (max-width: 575px) {
+  body {
+    padding-left: 0;
+  }
+  .js-products-container {
+    grid-template-columns: 1fr;
+    margin-left: auto;
+    margin-right: auto;
+  }
+} 
+
 .product-container {
   border: 1px solid rgb(200, 200, 200);
-  width: 510px;
+  max-width: 510px;
   display: inline-block;
-  margin: 0 40px 40px 0;
+  margin-bottom: 60px;
 }
 
 .product-grid {
@@ -32,6 +43,7 @@
   border-bottom: 1px solid rgb(200, 200,200);
   align-items: center;
 }
+
 .info-grid div p {
   margin: 0;
   padding: 2px 5px;
@@ -53,6 +65,10 @@
   background-color: rgb(200, 200, 200);
   margin: 0;
   width: 65px;
+}
+
+.js-cpu, .js-ram, .js-gpu, .js-storage, .js-display {
+  flex: 1;
 }
 
 .overlay {

@@ -1,19 +1,24 @@
+@media (max-width: 575px) {
+  body {
+    padding-left: 90px;
+  }
+}
+
 .build-grid {
   display: grid;
   grid-template-columns: 1fr 350px;
 }
 
- @media (max-width: 1150px) {
+@media (max-width: 1150px) {
   .build-grid {
     grid-template-columns: 1fr;
   }
- }
+}
 
 .section-1 {
   border : 1px solid rgb(220, 220, 220);
-  padding: 10px;
+  padding: 5px;
   max-width: 600px;
-  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -25,13 +30,29 @@
   border-radius: 25px;
 }
 
+.selector {
+  display: flex;
+  justify-content: space-around;
+}
+
+.selector-option {
+  display: grid;
+  grid-template-columns: 25px 1fr;
+}
+
 .options {
-  padding: 5px 0px 5px 30px;
+  padding: 5px 0px 5px 20px;
+}
+
+@media (max-width: 575px) {
+  .options {
+    padding: 5px 0 5px 10px;
+  }
 }
 
 .options P {
   cursor: pointer;
-  padding-left: 10px;
+  padding: 2px 10px;
 }
 
 .motherboard-button:hover, .cpu-button:hover, .gpu-button:hover, .storage-button:hover, .ram-button:hover, .psu-button:hover, .cc-button:hover {
@@ -47,6 +68,12 @@
 .css-motherboard-button, .css-cpu-button, .css-gpu-button, .css-storage-button, .css-ram-button, .css-psu-button, .css-cc-button {
   position: relative;
   margin: 5px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.invisible {
+  display: none;
 }
 
 .motherboard-info, .cpu-info, .gpu-info, .storage-info, .ram-info, .psu-info, .cc-info {
@@ -77,9 +104,17 @@
 
 .section-2 {
   border : 1px solid rgb(220, 220, 220);
-  padding: 10px;
-  max-width: 350px;
-  width: 100%;
+  padding: 5px;
+  width: 300px;
+  max-width: 300px;
+}
+
+@media (min-width: 1070px) {
+  .section-2 {
+    position: fixed;
+    top: 68px;
+    right: 10px;
+  }
 }
 
 .cost-title {
@@ -113,7 +148,7 @@
   background-color: rgb(100, 100, 100);
 }
 
-.build-sidebar div {
+.sidebar-button {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,13 +160,32 @@
   transition: margin 0.15s;
 }
 
-.build-sidebar div:hover {
+.sidebar-button:hover {
   margin: 10px 10px;
 }
 
 .build-sidebar img {
   width: 60px;
   cursor: pointer;
+}
+
+@media (max-width: 575px) {
+  .build-sidebar {
+    width: 90px;
+  }
+
+  .sidebar-button {
+    height: 50px;
+    margin: 10px 15px;
+  }
+
+  .sidebar-button:hover {
+    margin: 10px 5px;
+  }
+
+  .build-sidebar img {
+    width: 50px;
+  }
 }
 
 .overlay {
@@ -145,6 +199,12 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
+}
+
+@media (max-width: 575px) {
+  .overlay {
+    left: 90px;
+  }
 }
 
 .overlay img {

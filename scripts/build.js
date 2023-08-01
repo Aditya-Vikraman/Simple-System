@@ -1,20 +1,35 @@
 let motherboardListHTML = '';
 
 motherboard.forEach ((product) => {
-motherboardListHTML += `
-<div class="css-motherboard-button">
-  <p class="motherboard-button">
-  ${product.name} ( ${product.socket})
-  </p>
-  <P class="motherboard-info">
-  ${product.info} <br> Price: &#x20B9; ${product.price}
-  </p> 
-</div>
-`
+  motherboardListHTML += `
+    <div class="css-motherboard-button motherboard-button-${product.socket}">
+      <p class="motherboard-button">
+      ${product.name} ( ${product.socket})
+      </p>
+      <P class="motherboard-info">
+      ${product.info} <br> Price: &#x20B9; ${product.price}
+      </p> 
+    </div>
+  `;
 });
 
 document.querySelector('.js-motherboard-options').innerHTML = motherboardListHTML;
 
+const radioButtonCPU = document.querySelectorAll('input[name="cpu-selector"]');
+const motherboardContainer = document.querySelectorAll('.css-motherboard-button');
+
+radioButtonCPU.forEach ((radioButton) => {
+  radioButton.addEventListener('change', 
+  function rendList () {
+    motherboardContainer.forEach ((container) => {
+      if(container.classList.contains(`motherboard-button-${this.value}`)) {
+        container.style.display = "block";
+      } else {
+        container.style.display = "none";
+      };  
+    });
+  });    
+});
 
 const motherboardListButton = document.querySelectorAll('.motherboard-button');
 
@@ -49,19 +64,34 @@ motherboard.forEach ((product) => {
 let processorListHTML = '';
 
 processor.forEach ((product) => {
-processorListHTML += `
-<div class="css-cpu-button">
-  <p class="cpu-button">
-    ${product.brand} ${product.name} ${product.core} ( ${product.socket})
-  </p>
-  <p class="cpu-info">
-    ${product.info} <br> Price: &#x20B9; ${product.price}
-  </p>
-</div>
-`
+  processorListHTML += `
+    <div class="css-cpu-button cpu-button-${product.socket}">
+      <p class="cpu-button">
+        ${product.brand} ${product.name} ${product.core} ( ${product.socket})
+      </p>
+      <p class="cpu-info">
+        ${product.info} <br> Price: &#x20B9; ${product.price}
+      </p>
+    </div>
+  `
 });
 
 document.querySelector('.js-cpu-options').innerHTML = processorListHTML;
+
+const cpuContainer = document.querySelectorAll('.css-cpu-button');
+
+radioButtonCPU.forEach ((radioButton) => {
+  radioButton.addEventListener('change', 
+  function rendList () {
+    cpuContainer.forEach ((container) => {
+      if(container.classList.contains(`cpu-button-${this.value}`)) {
+        container.style.display = "block";
+      } else {
+        container.style.display = "none";
+      };  
+    });
+  });    
+});
 
 const cpuListButton = document.querySelectorAll('.cpu-button');
 
@@ -96,18 +126,34 @@ let graphicsCardListHTML = '';
 
 graphicsCard.forEach ((product) => {
   graphicsCardListHTML += `
-  <div class="css-gpu-button">
-    <p class="gpu-button">
-      ${product.manufacturer} ${product.brand} ${product.name}
-    </P>
-    <p class="gpu-info">
-     ${product.info} <br> Price: &#x20B9; ${product.price}
-    </p>
-  </div>
-  `
-})
+    <div class="css-gpu-button gpu-button-${product.brand}">
+      <p class="gpu-button">
+        ${product.manufacturer} ${product.brand} ${product.name}
+      </P>
+      <p class="gpu-info">
+      ${product.info} <br> Price: &#x20B9; ${product.price}
+      </p>
+    </div>
+  `;
+});
 
 document.querySelector('.js-gpu-options').innerHTML = graphicsCardListHTML;
+
+const radioButtonGPU = document.querySelectorAll('input[name="gpu-selector"]');
+const gpuContainer = document.querySelectorAll('.css-gpu-button');
+
+radioButtonGPU.forEach ((radioButton) => {
+  radioButton.addEventListener('change', 
+  function rendList () {
+    gpuContainer.forEach ((container) => {
+      if(container.classList.contains(`gpu-button-${this.value}`)) {
+        container.style.display = "block";
+      } else {
+        container.style.display = "none";
+      };  
+    });
+  });    
+});
 
 const gpuListButton = document.querySelectorAll('.gpu-button');
 gpuListButton.forEach ((button) => {
@@ -141,7 +187,7 @@ let storageListHTML = '';
 
 storage.forEach ((product) => {
   storageListHTML += `
-  <div class="css-storage-button">
+  <div class="css-storage-button storage-button-${product.space}">
     <p class="storage-button">
       ${product.name} ${product.space} ${product.formFactor} ${product.interface}
     </P>
@@ -153,6 +199,22 @@ storage.forEach ((product) => {
 });
 
 document.querySelector('.js-storage-options').innerHTML = storageListHTML;
+
+const radioButtonStorage = document.querySelectorAll('input[name="storage-selector"]');
+const storageContainer = document.querySelectorAll('.css-storage-button');
+
+radioButtonStorage.forEach ((radioButton) => {
+  radioButton.addEventListener('change', 
+  function rendList () {
+    storageContainer.forEach ((container) => {
+      if(container.classList.contains(`storage-button-${this.value}`)) {
+        container.style.display = "block";
+      } else {
+        container.style.display = "none";
+      };  
+    });
+  });    
+});
 
 const storageListButton = document.querySelectorAll('.storage-button');
 storageListButton.forEach ((button) => {
@@ -186,18 +248,34 @@ let memoryListHTML = '';
 
 memory.forEach ((product) => {
   memoryListHTML += `
-  <div class="css-ram-button">
-    <p class="ram-button">
-      ${product.name} ${product.space} ${product.type}
-    </P>
-    <p class="ram-info">
-      ${product.info} <br> Price: &#x20B9; ${product.price}
-    </p>
-  </div>
-  `
+    <div class="css-ram-button ram-button-${product.type}">
+      <p class="ram-button">
+        ${product.name} ${product.space} ${product.type}
+      </P>
+      <p class="ram-info">
+        ${product.info} <br> Price: &#x20B9; ${product.price}
+      </p>
+    </div>
+  `;
 });
 
 document.querySelector('.js-memory-options').innerHTML = memoryListHTML;
+
+const radioButtonRAM = document.querySelectorAll('input[name="ram-selector"]');
+const ramContainer = document.querySelectorAll('.css-ram-button');
+
+radioButtonRAM.forEach ((radioButton) => {
+  radioButton.addEventListener('change', 
+  function rendList () {
+    ramContainer.forEach ((container) => {
+      if(container.classList.contains(`ram-button-${this.value}`)) {
+        container.style.display = "block";
+      } else {
+        container.style.display = "none";
+      };  
+    });
+  });    
+});
 
 const memoryListButton = document.querySelectorAll('.ram-button');
 memoryListButton.forEach ((button) => {
@@ -348,7 +426,7 @@ let costSummaryHTML = `
 
   <div class="cost-element">
     <p>
-      Graphics Card (GPU) :
+      Graphics Card :
     </p>
     <p>
       &#x20B9; ${graphicsCardCost}
@@ -366,7 +444,7 @@ let costSummaryHTML = `
 
   <div class="cost-element">
     <p>
-      Memory (RAM) :
+      Memory :
     </p>
     <p>
       &#x20B9;  ${memoryCost}
@@ -375,7 +453,7 @@ let costSummaryHTML = `
   
   <div class="cost-element">
     <p> 
-      Power Supply (PSU) :
+      Power Supply :
     </p>
     <p>
       &#x20B9; ${powerSupplyCost}
