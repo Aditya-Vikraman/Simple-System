@@ -102,6 +102,24 @@ const graphicsCard = [
     manufacturer: 'Sapphire ',
     brand: 'AMD ',
     series: '7000 ',
+    name: 'Pulse Radeon RX 7800 XT',
+    info: 'GDDR6-16GB, PCIe 4.0 ',
+    price: 54500,
+    image: 'images/products/gpu/Sapphire-RX-7800-XT.jpg'
+  },
+  {
+    manufacturer: 'Sapphire ',
+    brand: 'AMD ',
+    series: '7000 ',
+    name: 'Pulse Radeon RX 7700 XT',
+    info: 'GDDR6-12GB, PCIe 4.0 ',
+    price: 54500,
+    image: 'images/products/gpu/Sapphire-RX-7700-XT.jpg'
+  },
+  {
+    manufacturer: 'Sapphire ',
+    brand: 'AMD ',
+    series: '7000 ',
     name: 'Pulse Radeon RX 7600',
     info: 'GDDR6-8GB, PCIe 4.0 ',
     price: 27400,
