@@ -1,6 +1,33 @@
 const processor = [
   {
     brand: 'Intel ',
+    name: 'Core i9-14900K ',
+    core: '24-Core 6.0GHz(Turbo) ',
+    socket: 'LGA-1700 Socket ',
+    info: 'DDR5-5600 MT/s, DDR4-3200 MT/s, PCIe 5.0, 8P(3.2GHz) & 16E(2.4GHz) Core, 32-Thread ',
+    price: 55400,
+    image: 'images/products/cpu/Intel-Core-i9-Logo.png',
+  },
+  {
+    brand: 'Intel ',
+    name: 'Core i7-14700K ',
+    core: '20-Core 5.6GHz(Turbo) ',
+    socket: 'LGA-1700 Socket ',
+    info: 'DDR5-5600 MT/s, DDR4-3200 MT/s, PCIe 5.0, 8P(3.4GHz) & 12E(2.5GHz) Core, 28-Thread ',
+    price: 40700,
+    image: 'images/products/cpu/Intel-Core-i7-Logo.png',
+  },
+  {
+    brand: 'Intel ',
+    name: 'Core i5-14600K ',
+    core: '14-Core 5.3GHz(Turbo) ',
+    socket: 'LGA-1700 Socket ',
+    info: 'DDR5-5600 MT/s, DDR4-3200 MT/s, PCIe 5.0, 6P(3.5GHz) & 8E(2.6GHz) Core, 20-Thread ',
+    price: 30700,
+    image: 'images/products/cpu/Intel-Core-i5-Logo.png',
+  },
+  {
+    brand: 'Intel ',
     name: 'Core i9-13900K ',
     core: '24-Core 5.8GHz(Turbo) ',
     socket: 'LGA-1700 Socket ',

@@ -350,46 +350,91 @@ powerSupply.forEach ((product) => {
   });
 });
 
-let caseCoolerListHTML = '';
+let caseListHTML = '';
 
-caseCooler.forEach ((product) => {
-  caseCoolerListHTML += `
-  <div class="css-cc-button">
-    <p class="cc-button">
+caseTower.forEach ((product) => {
+  caseListHTML += `
+  <div class="css-case-button">
+    <p class="case-button">
       ${product.name} ${product.type}
     </p>
-    <p class="cc-info">
+    <p class="case-info">
       Price: &#x20B9; ${product.price}
     </p>
   </div>
   `
 });
 
-document.querySelector('.js-case-cooler-options').innerHTML = caseCoolerListHTML;
+document.querySelector('.js-case-options').innerHTML = caseListHTML;
 
-const caseCoolerListButton = document.querySelectorAll('.cc-button');
-caseCoolerListButton.forEach ((button) => {
+const caseListButton = document.querySelectorAll('.case-button');
+caseListButton.forEach ((button) => {
   button.addEventListener('click',() => {
-    caseCoolerListButton.forEach ((button) => {
-      if (button.classList.contains('selected-cc')) {
-        button.classList.remove('selected-cc');
-        button.classList.add('cc-button');
+    caseListButton.forEach ((button) => {
+      if (button.classList.contains('selected-case')) {
+        button.classList.remove('selected-case');
+        button.classList.add('case-button');
       }
     });
-    button.classList.add('selected-cc');
-    button.classList.remove('cc-button');
+    button.classList.add('selected-case');
+    button.classList.remove('case-button');
   });
 });
 
-let caseCoolerCost = 0 ;
+let caseCost = 0 ;
 
-caseCooler.forEach ((product) => {
-  caseCoolerListButton.forEach ((button) => {
+caseTower.forEach ((product) => {
+  caseListButton.forEach ((button) => {
     button.addEventListener ('click', () => {
       if ((product.name + product.type) === button.innerText) {
-        caseCoolerCost = product.price;
+        caseCost = product.price;
         costCalculations ();
-        document.querySelector('.cc-container').innerHTML = `<img src="${product.image}">`
+        document.querySelector('.case-container').innerHTML = `<img src="${product.image}">`
+      }
+    });
+  });
+});
+
+let coolersListHTML =  '';
+
+coolers.forEach ((product) => {
+  coolersListHTML += `
+  <div class="css-cooler-button">
+    <p class="cooler-button">
+      ${product.manufacturer} ${product.name} 
+    </p>
+    <p class="cooler-info">
+      ${product.info} <br> Price: &#x20B9; ${product.price}
+    </p>
+  </div>
+  `
+});
+
+document.querySelector('.js-cooler-options').innerHTML = coolersListHTML;
+
+const coolersListButton = document.querySelectorAll('.cooler-button');
+coolersListButton.forEach ((button) => {
+  button.addEventListener('click',() => {
+    coolersListButton.forEach ((button) => {
+      if (button.classList.contains('selected-cooler')) {
+        button.classList.remove('selected-cooler');
+        button.classList.add('cooler-button');
+      }
+    });
+    button.classList.add('selected-cooler');
+    button.classList.remove('cooler-button');
+  });
+});
+
+let coolerCost = 0;
+
+coolers.forEach ((product) => {
+  coolersListButton.forEach ((button) => {
+    button.addEventListener('click', () => {
+      if ((product.manufacturer + product.name) === button.innerText) {
+        coolerCost = product.price;
+        costCalculations ();
+        document.querySelector('.cooler-container').innerHTML = `<img src="${product.image}">`
       }
     });
   });
@@ -398,7 +443,7 @@ caseCooler.forEach ((product) => {
 let totalCost = 0;
 
 function costCalculations () {
-totalCost = motherboardCost + processorCost + graphicsCardCost + storageCost + memoryCost + powerSupplyCost + caseCoolerCost;
+totalCost = motherboardCost + processorCost + graphicsCardCost + storageCost + memoryCost + powerSupplyCost + caseCost + coolerCost;
 rendCostTable ();
 }
 
@@ -462,10 +507,19 @@ let costSummaryHTML = `
 
   <div class="cost-element">
     <p>
-      case & Cooler :
+      Case  :
     </p>
     <p>
-      &#x20B9; ${caseCoolerCost}
+      &#x20B9; ${caseCost}
+    </p>
+  </div>
+
+  <div class="cost-element">
+    <p>
+      Cooler  :
+    </p>
+    <p>
+      &#x20B9; ${coolerCost}
     </p>
   </div>
 
