@@ -9,6 +9,15 @@ const graphicsCard = [
     image: 'images/products/gpu/Zotac-RTX-4090.jpg',
   },
   {
+    manufacturer: 'Asus ',
+    brand: 'nvidia ',
+    series: 'RTX 4000 ',
+    name: 'GeForce RTX 4080 Super',
+    info: 'GDDR6X-16GB, PCIe 4.0',
+    price: 146000,
+    image: 'images/products/gpu/Asus-RTX-4080-Super.jpg',
+  },
+  {
     manufacturer: 'Zotac ',
     brand: 'nvidia ',
     series: 'RTX 4000 ',
@@ -18,6 +27,15 @@ const graphicsCard = [
     image: 'images/products/gpu/Zotac-RTX-4080.jpg',
   },
   {
+    manufacturer: 'Asus ',
+    brand: 'nvidia ',
+    series: 'RTX 4000 ',
+    name: 'GeForce RTX 4070 Ti Super',
+    info: 'GDDR6X-16GB, PCIe 4.0',
+    price: 93000,
+    image: 'images/products/gpu/Asus-RTX-4070Ti-Super.jpg',
+  },
+  {
     manufacturer: 'Gigabyte ',
     brand: 'nvidia ',
     series: 'RTX 4000 ',
@@ -25,6 +43,15 @@ const graphicsCard = [
     info: 'GDDR6X-12GB, PCIe 4.0',
     price: 75000,
     image: 'images/products/gpu/Gigabyte-RTX-4070Ti.jpg',
+  },
+  {
+    manufacturer: 'Gigabyte ',
+    brand: 'nvidia ',
+    series: 'RTX 4000 ',
+    name: 'GeForce RTX 4070 Super',
+    info: 'GDDR6X-12GB, PCIe 4.0',
+    price: 64400,
+    image: 'images/products/gpu/Gigabyte-RTX-4070-Super.jpg',
   },
   {
     manufacturer: 'Asus ',

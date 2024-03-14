@@ -24,6 +24,14 @@ const memory = [
     image: 'images/products/ram/G.Skill-Trident-Z5-32GB-DDR5.jpg',
   },
   {
+    name: 'Patriot Memory Viper Venom ',
+    space: '16GB ',
+    type: 'DDR5 5200MHz',
+    info: '2 x 8GB',
+    price: 7100,
+    image: 'images/products/ram/Patriot-Memory-Viper-Venom-16GB-DDR5.jpg',
+  },
+  {
     name: 'G.Skill Ripjaws S5 288-pin ',
     space: '16GB ',
     type: 'DDR5 5200MHz',
@@ -62,6 +70,14 @@ const memory = [
     info: '2 x 16GB',
     price: 11300,
     image: 'images/products/ram/G.Skill-Ripjaws-S5-32GB-DDR4.jpg',
+  },
+  {
+    name: 'G.Skill Trident Z RGB 288-pin ',
+    space: '16GB ',
+    type: 'DDR4 3600MHz',
+    info: '2 x 8GB',
+    price: 5700,
+    image: 'images/products/ram/G.Skill-Trident-ZRGB-16GB-DDR4.jpg',
   },
   {
     name: 'Corsair Vengeance LPX 288-pin ',
