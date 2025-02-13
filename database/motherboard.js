@@ -1,89 +1,129 @@
 const motherboard = [
   {
-    name: 'Asus Rog Strix Z690-E ',
-    info: 'DDR5-4xDIMM-128GB-6400MHz/ PCIe 5.0/ WiFi 6E/ 2.5 Gb Ethernet ',
-    socket: 'LGA-1700 Socket ',
-    price: 52500,
-    image: 'images/products/motherboard/Asus-Z690-E.jpg',
+    name: 'ASRock Z890 Pro RS WiFi ',
+    info: 'DDR5-4xDIMM-256GB-9000MHz/ PCIe 5.0 x16/ PCIe 5.0 M.2/ WiFi 6E/ 2.5 GbE LAN/ 2x Thunderbolt 4 ',
+    socket: 'LGA-1851 ',
+    price: 27000,
+    image: 'images/products/motherboard/ASRock-Z890-Pro-RS-WiFi.jpg',
+  },
+  {
+    name: 'ASUS Prime B860-Plus WIFI-CSM ',
+    info: 'DDR5-4xDIMM-256GB-8600MHz/ PCIe 5.0 x16/ PCIe 5.0 M.2/ WiFi 6E/ 2.5 GbE LAN/ Thunderbolt 4 ',
+    socket: 'LGA-1851 ',
+    price: 19300,
+    image: 'images/products/motherboard/ASUS-Prime-B860-Plus-WIFI-CSM.jpg',
   },
   {
     name: 'Gigabyte Z790M Aorus Elite AX ',
-    info: 'DDR5-4XDIMM-198GB-7600MHz/ PCIe 4.0/ WiFi 6E/ 2.5 Gb Ethernet ',
-    socket: 'LGA-1700 Socket ',
-    price: 31700,
+    info: 'DDR5-4XDIMM-256GB-7600MHz/ PCIe 5.0 x16/ PCIe 4.0 M.2/ WiFi 6E/ 2.5 GbE LAN ',
+    socket: 'LGA-1700 ',
+    price: 23000,
     image: 'images/products/motherboard/Gigabyte-Z790M.jpg',
   },
   {
-    name: 'Asus Prime Z790-P Wifi ',
-    info: 'DDR5-4xDIMM-7200MHz/ PCIe 4.0 , 5.0/ WiFI 6E/ 2.5 Gb Ethernet ',
-    socket: 'LGA-1700 Socket ',
-    formFactor: 'ATX ',
-    price: 29800,
+    name: 'Asus Prime Z790-P (WiFi) ',
+    info: 'DDR5-4xDIMM-192GB-7200MHz/ PCIe 5.0 x16/ PCIe 4.0 M.2/ WiFI 6/ 2.5 GbE LAN ',
+    socket: 'LGA-1700 ',
+    price: 26000,
     image: 'images/products/motherboard/Asus-Z790-P.jpg',
   },
   {
-    name: 'Gigabyte B760 DS3H AC DDR4 ',
-    info: 'DDR4-4xDIMM-128GB/ PCIe 4.0 ',
-    socket: 'LGA-1700 Socket ',
-    formFactor: 'ATX ',
-    price: 17000, 
-    image: 'images/products/motherboard/Gigabyte-B760.jpg',
+    name: 'Asus Prime H770 Plus ',
+    info: 'DDR5-4xDIMM-192GB-7200MHz/ PCIe 5.0 x16/ PCIe 4.0 M.2/ 2.5GbE LAN ',
+    socket: 'LGA-1700 ',
+    price: 16500, 
+    image: 'images/products/motherboard/Asus-Prime-H770-Plus.jpg',
+  },
+  {
+    name: 'Gigabyte B760M DS3H AC (WiFi) ',
+    info: 'DDR5-4xDIMM-256GB-7600MHz/ PCIe 4.0 x16/2x PCIe 4.0 M.2/WiFi 6E/ 2.5GbE LAN ',
+    socket: 'LGA-1700 ',
+    price: 15000, 
+    image: 'images/products/motherboard/Gigabyte-B760M-DS3H-AX-WiFi.jpg',
   },
   {
     name: 'Gigabyte Aorus Z690 Tachyon ',
-    info: 'DDR5-2xDIMM-5000MHz/ PCIe 5.0/ WiFi 6E/ 2.5 Gb Ethernet ',
-    socket: 'LGA-1700 Socket ',
+    info: 'DDR5-2xDIMM-128GB-7000MHz/ PCIe 5.0 x8/ PCIe 4.0 M.2/ WiFi 6E/ 2.5 GbE LAN ',
+    socket: 'LGA-1700 ',
     price: 18000,
     image: 'images/products/motherboard/Gigabyte-Z690.jpg'
   },
+  { 
+    name: 'Gigabyte X870E Aorus Elite (WiFi) ',
+    info: 'DDR5-4xDIMM-256GB-8200MHz/ PCIe 5.0 x16/ PCIe 5.0 M.2/ WiFi 7/ 2.5 GbE LAN/2x USB4 ',
+    socket: 'AM5 ',
+    price: 31500,
+    image: 'images/products/motherboard/Gigabyte-X870E-Aorus-Elite-WiFi.jpg',
+  }, 
+  { 
+    name: 'ASRock X870 Pro RS WIFI ',
+    info: 'DDR5-4xDIMM-256GB-8000MHz/ PCIe 5.0 x16/ PCIe 5.0 M.2/ WiFi 7/ 2.5 GbE LAN/ USB4 ',
+    socket: 'AM5 ',
+    price: 23500,
+    image: 'images/products/motherboard/ASRock-X870-Pro-RS-WiFi.jpg',
+  }, 
+  { 
+    name: 'MSI Pro B850-P (WiFi) ',
+    info: 'DDR5-4xDIMM-256GB-8200MHz/ PCIe 5.0 x16/ PCIe 5.0 M.2/ WiFi 7/ 5 GbE LAN ',
+    socket: 'AM5 ',
+    price: 21000,
+    image: 'images/products/motherboard/MSI-Pro-B850-P-WiFi.jpg',
+  },
+  { 
+    name: 'MSI Pro B840-P (WiFi) ',
+    info: 'DDR5-4xDIMM-256GB-8000MHz/ PCIe 5.0 x16/ 2x PCIe 4.0 M.2/ WiFi 7/ 2.5 GbE LAN ',
+    socket: 'AM5 ',
+    price: 18000,
+    image: 'images/products/motherboard/MSI-Pro-B840-P-WiFi.jpg',
+  },
   {
     name: 'ASRock X670E Pro RS ',
-    info: 'DDR5-4XDIMM-128GB-6600MHz/ PCIe 5.0/ Wifi 6E/ 2.5 Gb Ethernet ',
+    info: 'DDR5-4XDIMM-256GB-7600MHz/ PCIe 5.0 x16/ PCIe 5.0 M.2/ Wifi 6E/ 2.5 GbE LAN ',
     socket: 'AM5 Socket ',
     price: 30000,
     image: 'images/products/motherboard/ASRock-X670E.jpg'
   },
   {
-    name: 'Asus TUF Gaming B650-Plus Wifi ',
-    info: 'DDR5-4xDIMM-128GB-6400MHz/ PCIe 5.0/ Wifi 6E/ 2.5 Gb Ethernet ',
+    name: 'Gigabyte B650M Aorus Pro AX (WiFi) ',
+    info: 'DDR5-4xDIMM-128GB-6600MHz/ PCIe 4.0 x16/ PCIe 5.0 M.2/ Wifi 6E/ 2.5 GbE LAN',
     socket: 'AM5 Socket ',
-    price: 24000,
-    image: 'images/products/motherboard/Asus-B650-Plus.jpg'
-  },
-  {
-    name: 'Gigabyte B650 Aorus Pro AX ',
-    info: 'DDR5-4xDIMM-128GB-6600MHz/ PCIe 5.0/ Wifi 6E/ 2.5 Gb Ethernet ',
-    socket: 'AM5 Socket ',
-    price: 23000,
+    price: 22000,
     image: 'images/products/motherboard/Gigabyte-B650.jpg'
   },
   {
-    name: 'ASRock X570 Taichi ',
-    info: 'DDR4-4xDIMM-128GB-4600MHz/ PCIe 4.0/ WiFi 6/ thunderbolt 3 ',
-    socket: 'AM4 Socket ',
-    price: 28000,
-    image: 'images/products/motherboard/ASRock-X570.jpg'
+    name: 'Gigabyte B650 UD AC (WiFi) ',
+    info: 'DDR5-4xDIMM-256GB-8000MHz/ PCIe 4.0 x16/ PCIe 5.0 M.2 ',
+    socket: 'AM5 Socket ',
+    price: 14800,
+    image: 'images/products/motherboard/Gigabyte-B650-UD-AC-WiFi.jpg'
   },
   {
-    name: 'Asus Rog Strix B550-F ',
-    info: 'DDR4-4xDIMM-68GB-3200MHz/ PCIe 3.0 NVMe ',
-    socket: 'AM4 Socket ',
-    price: 26200,
-    image: 'images/products/motherboard/Asus-B550-F.jpg'
+    name: 'MSI PRO A620M-E ',
+    info: 'DDR5-2xDIMM-128GB-6800MHz/ PCIe 4.0 x16/ PCIe 4.0 M.2 ',
+    socket: 'AM5 Socket ',
+    price: 7900,
+    image: 'images/products/motherboard/MSI-Pro-A620M-E.jpg'
   },
   {
     name: 'Gigabyte X570 Aorus Elite ',
-    info: 'DDR4-4xDIMM-128GB-4700MHz/ PCIe 4.0/ WiFi 6 ',
+    info: 'DDR4-4xDIMM-128GB-4700MHz/ PCIe 4.0 x16/ 2x PCIe 4.0 M.2/ WiFi 6 ',
     socket: 'AM4 Socket ',
-    price: 20000,
+    price: 18000,
     image: 'images/products/motherboard/Gigabyte-X570.jpg'
   },
   {
-    name: 'Asus Rog Strix B450-F ',
-    info: 'DDR4-4xDIMM-68GB-3200MHz/ PCIe 3.0 NVMe ',
+    name: 'Gigabyte B550M DS3H AC (WiFi) ',
+    info: 'DDR4-4xDIMM-128GB-4700MHz/ PCIe 4.0 x16/ 2x PCIe 4.0 M.2 ',
     socket: 'AM4 Socket ',
-    price: 13000,
-    image: 'images/products/motherboard/Asus-B450-F.jpg'
+    price: 10000,
+    image: 'images/products/motherboard/Gigabyte-B550M-DS3H-AC-WiFi.jpg'
+  },
+  {
+    name: 'Asus Prime A520M-K ',
+    info: 'DDR4-2xDIMM-64GB-4800MHz/ PCIe 3.0 x16/ 2x PCIe 3.0 M.2/ ',
+    socket: 'AM4 Socket ',
+    price: 4000,
+    image: 'images/products/motherboard/Asus-Prime-A520M-K.jpg'
   },
  
 ];
