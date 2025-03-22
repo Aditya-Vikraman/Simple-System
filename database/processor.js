@@ -109,6 +109,15 @@ const processor = [
   },
   {
     brand: 'AMD ',
+    name: 'Ryzen 9 9950X3D ',
+    core: '16-Core 5.7GHz(Max Boost) ',
+    socket: 'AM5 Socket ',
+    info: 'DDR5-5600 MT/s, 170W, (4.3GHz-Base Clock), 32-Thread ',
+    price: 72200,
+    image: 'images/products/cpu/amd-ryzen-9-logo.webp',
+  },
+  {
+    brand: 'AMD ',
     name: 'Ryzen 9 9950X ',
     core: '16-Core 5.7GHz(Max Boost) ',
     socket: 'AM5 Socket ',
