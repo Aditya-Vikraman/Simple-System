@@ -24,15 +24,21 @@ const caseTower = [
     image: 'images/products/case/Antec-C8-ARGB.jpg',
   },
   {
+    name: 'Lian Li Lancool 216 ARGB ',
+    type: 'E-ATX Mid Tower',
+    price: 8200,
+    image: 'images/products/case/Lian Li-Lancool-216-ARGB.jpg',
+  },
+  {
+    name: 'Lian Li Lancool 207 White ARGB ',
+    type: 'ATX Mid Tower',
+    price: 7700,
+    image: 'images/products/case/Lian Li-Lancool-207-White-ARGB.jpg',
+  },
+  {
     name: 'Antec CX800 ARGB ',
     type: 'ATX Mid Tower',
     price: 6500,
     image: 'images/products/case/Antec-CX800-ARGB.jpg',
-  },
-  {
-    name: 'Ant Esports ICE-590TG ARGB ',
-    type: 'E-ATX Mid Tower',
-    price: 5000,
-    image: 'images/products/case/Ant-Esports-ICE-590TG-ARGB.jpg',
   },
 ];

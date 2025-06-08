@@ -15,6 +15,13 @@ const coolers = [
   },
   {
     manufacturer: 'Deepcool ',
+    name: 'Assassin IV',
+    info: 'Dual tower, two 120/140mm fan, 280W TDP',
+    price: 8800,
+    image: 'images/products/cooler/Deepcool-Assassin-IV.jpg',
+  },
+  {
+    manufacturer: 'Deepcool ',
     name: 'AK620 Zero Dark',
     info: 'Dual tower, two 120mm fan, 260W TDP',
     price: 6800,
