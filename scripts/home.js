@@ -1,10 +1,49 @@
+const searchElement = document.querySelector('.js-search-bar');
+
+function handleSearchEvent () {
+  const searchInput = searchElement.value;
+  window.location.href=`index.html?search=${searchInput}`
+}
+
+document.querySelector('.js-search-button').addEventListener('click', () => {
+  handleSearchEvent();
+});
+
+searchElement.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    handleSearchEvent();
+  }
+})
+
+const url = new URL (window.location.href);
+const search = url.searchParams.get('search');
+
+console.log(search);
+
+let filteredLaptops = laptops
+
+if (search) {
+  const newArray = filteredLaptops.filter(checkLaptops)
+
+  function checkLaptops (laptop) {
+    return laptop.name.toLowerCase().includes(`${search.toLowerCase()}`)  ||
+    laptop.cpu.toLowerCase().includes(`${search.toLowerCase()}`) ||
+    laptop.gpu.toLowerCase().includes(`${search.toLowerCase()}`) ||
+    laptop.ram.toLowerCase().includes(`${search.toLowerCase()}`)||
+    laptop.storage.toLowerCase().includes(`${search.toLowerCase()}`) ||
+    laptop.display.toLowerCase().includes(`${search.toLowerCase()}`)
+  }
+
+  filteredLaptops = newArray;
+}
+
 let productListHTML = '';
 
-laptops.forEach ((product) => {
+filteredLaptops.forEach ((product) => {
 productListHTML += `
   <div class="product-container">
     <div class="product-grid">
-      <div class="product-image-container">
+      <div class="product-image-container js-product-image-container">
         <img src="${product.image}">
       </div>
       <div class="info-grid">
@@ -15,7 +54,7 @@ productListHTML += `
           <p class="section">
             CPU
           </p>
-          <p class="js-cpu">
+          <p class="cpu">
             ${product.cpu}
           </p>
         </div>
@@ -23,7 +62,7 @@ productListHTML += `
           <p class="section">
             RAM
           </p>
-          <p class="js-ram">
+          <p class="ram">
             ${product.ram}
           </p>
         </div>
@@ -31,15 +70,15 @@ productListHTML += `
           <p class="section">
             GPU
           </p>
-          <p class="js-gpu">
+          <p class="gpu">
             ${product.gpu}
           </p>
         </div>
         <div>
           <p class="section">
-            storage
+            Storage
           </p>
-          <p class="js-storage">
+          <p class="storage">
             ${product.storage}
           </p>
         </div>
@@ -47,12 +86,12 @@ productListHTML += `
           <p class="section">
             Display
           </p>
-          <p class="js-display">
+          <p class="display">
             ${product.display}
           </p>
         </div>
-        <p class="js-price">
-          Price: &#x20B9; ${product.price}
+        <p class="price">
+          Price: &#x20B9; ${formatCurrency(product.price)}
         </p>
       </div>
     </div>
@@ -61,20 +100,25 @@ productListHTML += `
 `
 });
 
-document.querySelector('.js-products-container').innerHTML = productListHTML;
+function formatCurrency (cost) {
+  let costString = cost.toLocaleString("en-IN", {style:"currency", currency: "INR", maximumFractionDigits: 0 });
+  return costString.substring(1)
+}
 
-document.querySelectorAll('.product-image-container').forEach ((button) => {
+document.querySelector('.js-products-grid').innerHTML = productListHTML;
+
+document.querySelectorAll('.js-product-image-container').forEach ((button) => {
   button.addEventListener('click', () => {
-    document.querySelector('.image-box').innerHTML = `
+    document.querySelector('.js-image-box').innerHTML = `
     <div class="overlay">
       ${button.innerHTML};
-      <P class="close-button">
+      <P class="close-button js-close-button">
         X
       </P>
     </div>
     `;
-    document.querySelector('.close-button').addEventListener ('click', () => {
-      document.querySelector('.image-box').innerHTML = '';
+    document.querySelector('.js-close-button').addEventListener ('click', () => {
+      document.querySelector('.js-image-box').innerHTML = '';
     });
   });
 });

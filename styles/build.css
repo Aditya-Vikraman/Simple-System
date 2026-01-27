@@ -65,7 +65,7 @@
  
 }
 
-.css-motherboard-button, .css-cpu-button, .css-gpu-button, .css-storage-button, .css-ram-button, .css-psu-button, .css-case-button, .css-cooler-button {
+.motherboard-container, .cpu-container, .gpu-container, .storage-container, .ram-container, .psu-container, .case-container, .cooler-container {
   position: relative;
   margin: 5px;
   line-height: 20px;
@@ -79,29 +79,35 @@
 .motherboard-info, .cpu-info, .gpu-info, .storage-info, .ram-info, .psu-info, .case-info, .cooler-info {
   display: flex;
   align-items: center;
+
+  font-family: Roboto, Arial;
   background-color: white;
   padding: 10px;
-  position: absolute;
+  
   border-radius: 5px;
   box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+
   position: absolute;
   top: 28px;
+
   opacity: 0;
   transition: opacity 0.15s;
   pointer-events: none;
   z-index: 100;
 }
 
-.css-motherboard-button:hover .motherboard-info,
-.css-cpu-button:hover .cpu-info,
-.css-gpu-button:hover .gpu-info,
-.css-storage-button:hover .storage-info,
-.css-ram-button:hover .ram-info,
-.css-psu-button:hover .psu-info,
-.css-case-button:hover .case-info,
-.css-cooler-button:hover .cooler-info {
+.motherboard-container:hover .motherboard-info,
+.cpu-container:hover .cpu-info,
+.gpu-container:hover .gpu-info,
+.storage-container:hover .storage-info,
+.ram-container:hover .ram-info,
+.psu-container:hover .psu-info,
+.case-container:hover .case-info,
+.cooler-container:hover .cooler-info {
   opacity: 1;
 }
+
+/* ================= Cost Summary ================= */
 
 .section-2 {
   border : 1px solid rgb(220, 220, 220);
@@ -128,7 +134,12 @@
 .cost-element, .cost-bar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 5px 15px;
+}
+
+.cost {
+  font-family: Roboto, Arial;
 }
 
 .cost-bar {
@@ -140,13 +151,24 @@
   font-size: 20px;
 }
 
+/*  ================= side bar ================= */
+
 .build-sidebar {
   position: fixed;
   top: 60px;
   left: 0;
   bottom: 0px;
   width: 120px;
+
   background-color: rgb(100, 100, 100);
+}
+
+@media (max-width: 575px) {
+  .build-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
 
 .sidebar-button {
@@ -187,6 +209,8 @@
   }
 
 }
+
+/* ================= overlay image ================= */
 
 .overlay {
   background-color: rgba(200, 200, 200, 0.8);

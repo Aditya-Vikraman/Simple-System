@@ -1,10 +1,10 @@
 const main = document.querySelector('.js-content');
 
-const sidebarButton = document.querySelectorAll('.sidebar-link');
+const sidebarButtons = document.querySelectorAll('.js-sidebar-link');
 
-sidebarButton.forEach ((button) => {
+sidebarButtons.forEach ((button) => {
   button.addEventListener ('click', () => {
-    sidebarButton.forEach ((button) => {
+    sidebarButtons.forEach ((button) => {
       if (button.classList.contains('selected')) {
         button.classList.remove('selected');
       }

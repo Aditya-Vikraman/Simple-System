@@ -79,49 +79,49 @@ const motherboard = [
   {
     name: 'ASRock X670E Pro RS ',
     info: 'DDR5-4XDIMM-256GB-7600MHz/ PCIe 5.0 x16/ PCIe 5.0 M.2/ Wifi 6E/ 2.5 GbE LAN ',
-    socket: 'AM5 Socket ',
+    socket: 'AM5 ',
     price: 30000,
     image: 'images/products/motherboard/ASRock-X670E.jpg'
   },
   {
     name: 'Gigabyte B650M Aorus Pro AX (WiFi) ',
     info: 'DDR5-4xDIMM-128GB-6600MHz/ PCIe 4.0 x16/ PCIe 5.0 M.2/ Wifi 6E/ 2.5 GbE LAN',
-    socket: 'AM5 Socket ',
+    socket: 'AM5 ',
     price: 22000,
     image: 'images/products/motherboard/Gigabyte-B650.jpg'
   },
   {
     name: 'Gigabyte B650 UD AC (WiFi) ',
     info: 'DDR5-4xDIMM-256GB-8000MHz/ PCIe 4.0 x16/ PCIe 5.0 M.2 ',
-    socket: 'AM5 Socket ',
+    socket: 'AM5 ',
     price: 14800,
     image: 'images/products/motherboard/Gigabyte-B650-UD-AC-WiFi.jpg'
   },
   {
     name: 'MSI PRO A620M-E ',
     info: 'DDR5-2xDIMM-128GB-6800MHz/ PCIe 4.0 x16/ PCIe 4.0 M.2 ',
-    socket: 'AM5 Socket ',
+    socket: 'AM5 ',
     price: 7900,
     image: 'images/products/motherboard/MSI-Pro-A620M-E.jpg'
   },
   {
     name: 'Gigabyte X570 Aorus Elite ',
     info: 'DDR4-4xDIMM-128GB-4700MHz/ PCIe 4.0 x16/ 2x PCIe 4.0 M.2/ WiFi 6 ',
-    socket: 'AM4 Socket ',
+    socket: 'AM4 ',
     price: 18000,
     image: 'images/products/motherboard/Gigabyte-X570.jpg'
   },
   {
     name: 'Gigabyte B550M DS3H AC (WiFi) ',
     info: 'DDR4-4xDIMM-128GB-4700MHz/ PCIe 4.0 x16/ 2x PCIe 4.0 M.2 ',
-    socket: 'AM4 Socket ',
+    socket: 'AM4 ',
     price: 10000,
     image: 'images/products/motherboard/Gigabyte-B550M-DS3H-AC-WiFi.jpg'
   },
   {
     name: 'Asus Prime A520M-K ',
     info: 'DDR4-2xDIMM-64GB-4800MHz/ PCIe 3.0 x16/ 2x PCIe 3.0 M.2/ ',
-    socket: 'AM4 Socket ',
+    socket: 'AM4 ',
     price: 4000,
     image: 'images/products/motherboard/Asus-Prime-A520M-K.jpg'
   },

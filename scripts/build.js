@@ -1,13 +1,15 @@
+// ==================== motherboard ====================
+
 let motherboardListHTML = '';
 
 motherboard.forEach ((product) => {
   motherboardListHTML += `
-    <div class="css-motherboard-button motherboard-button-${product.socket}">
-      <p class="motherboard-button">
+    <div class="motherboard-container js-motherboard-container motherboard-container-${product.socket}">
+      <p class="motherboard-button js-motherboard-button">
       ${product.name} ( ${product.socket})
       </p>
       <P class="motherboard-info">
-      ${product.info} <br> Price: &#x20B9; ${product.price}
+      ${product.info} <br> Price: &#x20B9; ${formatCurrency(product.price)}
       </p> 
     </div>
   `;
@@ -15,14 +17,14 @@ motherboard.forEach ((product) => {
 
 document.querySelector('.js-motherboard-options').innerHTML = motherboardListHTML;
 
-const radioButtonCPU = document.querySelectorAll('input[name="cpu-selector"]');
-const motherboardContainer = document.querySelectorAll('.css-motherboard-button');
+const socketSelectorElements = document.querySelectorAll('input[name="socket-selector"]');
+const motherboardContainers = document.querySelectorAll('.js-motherboard-container');
 
-radioButtonCPU.forEach ((radioButton) => {
+socketSelectorElements.forEach ((radioButton) => {
   radioButton.addEventListener('change', 
   function rendList () {
-    motherboardContainer.forEach ((container) => {
-      if(container.classList.contains(`motherboard-button-${this.value}`)) {
+    motherboardContainers.forEach ((container) => {
+      if(container.classList.contains(`motherboard-container-${this.value}`)) {
         container.style.display = "block";
       } else {
         container.style.display = "none";
@@ -31,11 +33,11 @@ radioButtonCPU.forEach ((radioButton) => {
   });    
 });
 
-const motherboardListButton = document.querySelectorAll('.motherboard-button');
+const motherboardListButtons = document.querySelectorAll('.js-motherboard-button');
 
-motherboardListButton.forEach ((button) => {
+motherboardListButtons.forEach ((button) => {
   button.addEventListener('click',() => {
-    motherboardListButton.forEach ((button) => {
+    motherboardListButtons.forEach ((button) => {
       if (button.classList.contains('selected-motherboard')) {
         button.classList.remove('selected-motherboard');
         button.classList.add('motherboard-button');
@@ -43,34 +45,35 @@ motherboardListButton.forEach ((button) => {
     });
     button.classList.add('selected-motherboard');
     button.classList.remove('motherboard-button');
-    
   })
 });
 
 let motherboardCost = 0;
 
 motherboard.forEach ((product) => {
-  motherboardListButton.forEach ((button) => {
+  motherboardListButtons.forEach ((button) => {
     button.addEventListener('click', () => {
       if ((product.name + `( ${product.socket})`) === button.innerText) {
         motherboardCost = product.price;
         costCalculations ();
-        document.querySelector('.motherboard-container').innerHTML = `<img src="${product.image}">`
+        document.querySelector('.js-motherboard-sidebar-container').innerHTML = `<img src="${product.image}">`
       }
     });
    });
 });
 
+// ==================== processor ====================
+
 let processorListHTML = '';
 
 processor.forEach ((product) => {
   processorListHTML += `
-    <div class="css-cpu-button cpu-button-${product.socket}">
-      <p class="cpu-button">
+    <div class="cpu-container js-cpu-container cpu-container-${product.socket}">
+      <p class="cpu-button js-cpu-button">
         ${product.brand} ${product.name} ${product.core} ( ${product.socket})
       </p>
       <p class="cpu-info">
-        ${product.info} <br> Price: &#x20B9; ${product.price}
+        ${product.info} <br> Price: &#x20B9; ${formatCurrency(product.price)}
       </p>
     </div>
   `
@@ -78,13 +81,13 @@ processor.forEach ((product) => {
 
 document.querySelector('.js-cpu-options').innerHTML = processorListHTML;
 
-const cpuContainer = document.querySelectorAll('.css-cpu-button');
+const cpuContainers = document.querySelectorAll('.js-cpu-container');
 
-radioButtonCPU.forEach ((radioButton) => {
+socketSelectorElements.forEach ((radioButton) => {
   radioButton.addEventListener('change', 
   function rendList () {
-    cpuContainer.forEach ((container) => {
-      if(container.classList.contains(`cpu-button-${this.value}`)) {
+    cpuContainers.forEach ((container) => {
+      if(container.classList.contains(`cpu-container-${this.value}`)) {
         container.style.display = "block";
       } else {
         container.style.display = "none";
@@ -93,11 +96,11 @@ radioButtonCPU.forEach ((radioButton) => {
   });    
 });
 
-const cpuListButton = document.querySelectorAll('.cpu-button');
+const cpuListButtons = document.querySelectorAll('.js-cpu-button');
 
-cpuListButton.forEach ((button) => {
+cpuListButtons.forEach ((button) => {
   button.addEventListener('click',() => {
-    cpuListButton.forEach ((button) => {
+    cpuListButtons.forEach ((button) => {
       if (button.classList.contains('selected-cpu')) {
         button.classList.remove('selected-cpu');
         button.classList.add('cpu-button');
@@ -111,27 +114,29 @@ cpuListButton.forEach ((button) => {
 let processorCost = 0;
 
 processor.forEach ((product) => {
-  cpuListButton.forEach ((button) => {
+  cpuListButtons.forEach ((button) => {
     button.addEventListener ('click', () => {
       if ((product.brand + product.name + product.core + `( ${product.socket})`) === button.innerText) {
         processorCost = product.price;
         costCalculations ();
-        document.querySelector('.cpu-container').innerHTML = `<img src="${product.image}">`
+        document.querySelector('.js-cpu-sidebar-container').innerHTML = `<img src="${product.image}">`
       }
     })
   });
 });
 
+// ==================== GPU ====================
+
 let graphicsCardListHTML = '';
 
 graphicsCard.forEach ((product) => {
   graphicsCardListHTML += `
-    <div class="css-gpu-button gpu-button-${product.brand}">
-      <p class="gpu-button">
+    <div class="gpu-container js-gpu-container gpu-container-${product.brand}">
+      <p class="gpu-button js-gpu-button">
         ${product.manufacturer} ${product.brand} ${product.name}
       </P>
       <p class="gpu-info">
-      ${product.info} <br> Price: &#x20B9; ${product.price}
+      ${product.info} <br> Price: &#x20B9; ${formatCurrency(product.price)}
       </p>
     </div>
   `;
@@ -139,14 +144,14 @@ graphicsCard.forEach ((product) => {
 
 document.querySelector('.js-gpu-options').innerHTML = graphicsCardListHTML;
 
-const radioButtonGPU = document.querySelectorAll('input[name="gpu-selector"]');
-const gpuContainer = document.querySelectorAll('.css-gpu-button');
+const GPUSelectorElements = document.querySelectorAll('input[name="gpu-selector"]');
+const gpuContainers = document.querySelectorAll('.js-gpu-container');
 
-radioButtonGPU.forEach ((radioButton) => {
+GPUSelectorElements.forEach ((radioButton) => {
   radioButton.addEventListener('change', 
   function rendList () {
-    gpuContainer.forEach ((container) => {
-      if(container.classList.contains(`gpu-button-${this.value}`)) {
+    gpuContainers.forEach ((container) => {
+      if(container.classList.contains(`gpu-container-${this.value}`)) {
         container.style.display = "block";
       } else {
         container.style.display = "none";
@@ -155,10 +160,11 @@ radioButtonGPU.forEach ((radioButton) => {
   });    
 });
 
-const gpuListButton = document.querySelectorAll('.gpu-button');
-gpuListButton.forEach ((button) => {
+const gpuListButtons = document.querySelectorAll('.js-gpu-button');
+
+gpuListButtons.forEach ((button) => {
   button.addEventListener('click',() => {
-    gpuListButton.forEach ((button) => {
+    gpuListButtons.forEach ((button) => {
       if (button.classList.contains('selected-gpu')) {
         button.classList.remove('selected-gpu');
         button.classList.add('gpu-button');
@@ -172,27 +178,29 @@ gpuListButton.forEach ((button) => {
 let graphicsCardCost = 0;
 
 graphicsCard.forEach ((product) => {
-  gpuListButton.forEach ((button) => {
+  gpuListButtons.forEach ((button) => {
     button.addEventListener ('click', () => {
       if ((product.manufacturer + product.brand + product.name) === button.innerText) {
         graphicsCardCost = product.price;
         costCalculations ();
-        document.querySelector('.gpu-container').innerHTML = `<img src="${product.image}">`
+        document.querySelector('.js-gpu-sidebar-container').innerHTML = `<img src="${product.image}">`
       }
     });
   });
 });
 
+// ==================== storage ====================
+
 let storageListHTML = '';
 
 storage.forEach ((product) => {
   storageListHTML += `
-  <div class="css-storage-button storage-button-${product.space}">
-    <p class="storage-button">
+  <div class="storage-container js-storage-container storage-container-${product.space}">
+    <p class="storage-button js-storage-button">
       ${product.name} ${product.space} ${product.formFactor} ${product.interface}
     </P>
     <p class="storage-info">
-      Price: &#x20B9; ${product.price}
+      Price: &#x20B9; ${formatCurrency(product.price)}
     </p>
   </div>
   `
@@ -200,14 +208,14 @@ storage.forEach ((product) => {
 
 document.querySelector('.js-storage-options').innerHTML = storageListHTML;
 
-const radioButtonStorage = document.querySelectorAll('input[name="storage-selector"]');
-const storageContainer = document.querySelectorAll('.css-storage-button');
+const storageSizeSelectorElements = document.querySelectorAll('input[name="storage-size-selector"]');
+const storageContainers = document.querySelectorAll('.js-storage-container');
 
-radioButtonStorage.forEach ((radioButton) => {
+storageSizeSelectorElements.forEach ((radioButton) => {
   radioButton.addEventListener('change', 
   function rendList () {
-    storageContainer.forEach ((container) => {
-      if(container.classList.contains(`storage-button-${this.value}`)) {
+    storageContainers.forEach ((container) => {
+      if(container.classList.contains(`storage-container-${this.value}`)) {
         container.style.display = "block";
       } else {
         container.style.display = "none";
@@ -216,10 +224,10 @@ radioButtonStorage.forEach ((radioButton) => {
   });    
 });
 
-const storageListButton = document.querySelectorAll('.storage-button');
-storageListButton.forEach ((button) => {
+const storageListButtons = document.querySelectorAll('.js-storage-button');
+storageListButtons.forEach ((button) => {
   button.addEventListener('click',() => {
-    storageListButton.forEach ((button) => {
+    storageListButtons.forEach ((button) => {
       if (button.classList.contains('selected-storage')) {
         button.classList.remove('selected-storage');
         button.classList.add('storage-button');
@@ -233,27 +241,29 @@ storageListButton.forEach ((button) => {
 let storageCost = 0;
 
 storage.forEach ((product) => {
-  storageListButton.forEach ((button) => {
+  storageListButtons.forEach ((button) => {
     button.addEventListener ('click', () => {
       if ((product.name + product.space + product.formFactor + product.interface) === button.innerText) {
         storageCost = product.price;
         costCalculations ();
-        document.querySelector('.storage-container').innerHTML = `<img src="${product.image}">`
+        document.querySelector('.js-storage-sidebar-container').innerHTML = `<img src="${product.image}">`
       }
     });
   });
 });
 
+// ==================== RAM ====================
+
 let memoryListHTML = '';
 
 memory.forEach ((product) => {
   memoryListHTML += `
-    <div class="css-ram-button ram-button-${product.type}">
-      <p class="ram-button">
+    <div class="ram-container js-ram-container ram-container-${product.type}">
+      <p class="ram-button js-ram-button">
         ${product.name} ${product.space} ${product.type}
       </P>
       <p class="ram-info">
-        ${product.info} <br> Price: &#x20B9; ${product.price}
+        ${product.info} <br> Price: &#x20B9; ${formatCurrency(product.price)}
       </p>
     </div>
   `;
@@ -261,14 +271,14 @@ memory.forEach ((product) => {
 
 document.querySelector('.js-memory-options').innerHTML = memoryListHTML;
 
-const radioButtonRAM = document.querySelectorAll('input[name="ram-selector"]');
-const ramContainer = document.querySelectorAll('.css-ram-button');
+const RAMSelectorElements = document.querySelectorAll('input[name="ram-selector"]');
+const ramContainers = document.querySelectorAll('.js-ram-container');
 
-radioButtonRAM.forEach ((radioButton) => {
+RAMSelectorElements.forEach ((radioButton) => {
   radioButton.addEventListener('change', 
   function rendList () {
-    ramContainer.forEach ((container) => {
-      if(container.classList.contains(`ram-button-${this.value}`)) {
+    ramContainers.forEach ((container) => {
+      if(container.classList.contains(`ram-container-${this.value}`)) {
         container.style.display = "block";
       } else {
         container.style.display = "none";
@@ -277,10 +287,11 @@ radioButtonRAM.forEach ((radioButton) => {
   });    
 });
 
-const memoryListButton = document.querySelectorAll('.ram-button');
-memoryListButton.forEach ((button) => {
+const memoryListButtons = document.querySelectorAll('.js-ram-button');
+
+memoryListButtons.forEach ((button) => {
   button.addEventListener('click',() => {
-    memoryListButton.forEach ((button) => {
+    memoryListButtons.forEach ((button) => {
       if (button.classList.contains('selected-ram')) {
         button.classList.remove('selected-ram');
         button.classList.add('ram-button');
@@ -294,27 +305,29 @@ memoryListButton.forEach ((button) => {
 let memoryCost = 0;
 
 memory.forEach ((product) => {
-  memoryListButton.forEach ((button) => {
+  memoryListButtons.forEach ((button) => {
     button.addEventListener ('click', () => {
       if ((product.name + product.space + product.type) === button.innerText) {
         memoryCost = product.price;
         costCalculations ();
-        document.querySelector('.ram-container').innerHTML = `<img src="${product.image}">`
+        document.querySelector('.js-ram-sidebar-container').innerHTML = `<img src="${product.image}">`
       }
     });
   });
 });
 
+// ==================== PSU ====================
+
 let  powerSupplyListHTML = '';
 
 powerSupply.forEach ((product) => {
   powerSupplyListHTML += `
-  <div class="css-psu-button">
-    <p class="psu-button">
+  <div class="psu-container">
+    <p class="psu-button js-psu-button">
       ${product.manufacturer} ${product.name} ${product.wattage} ${product.efficiency} ${product.modular}
     </p>
     <p class="psu-info">
-      Price: &#x20B9; ${product.price}
+      Price: &#x20B9; ${formatCurrency(product.price)}
     </p>
   </div>
   `
@@ -322,10 +335,10 @@ powerSupply.forEach ((product) => {
 
 document.querySelector('.js-power-supply-options').innerHTML = powerSupplyListHTML;
 
-const powerSupplyListButton = document.querySelectorAll('.psu-button');
-powerSupplyListButton.forEach ((button) => {
+const powerSupplyListButtons = document.querySelectorAll('.js-psu-button');
+powerSupplyListButtons.forEach ((button) => {
   button.addEventListener('click',() => {
-    powerSupplyListButton.forEach ((button) => {
+    powerSupplyListButtons.forEach ((button) => {
       if (button.classList.contains('selected-psu')) {
         button.classList.remove('selected-psu');
         button.classList.add('psu-button');
@@ -339,27 +352,29 @@ powerSupplyListButton.forEach ((button) => {
 let powerSupplyCost = 0;
 
 powerSupply.forEach ((product) => {
-  powerSupplyListButton.forEach ((button) => {
+  powerSupplyListButtons.forEach ((button) => {
     button.addEventListener ('click', () => {
       if ((product.manufacturer + product.name + product.wattage + product.efficiency + product.modular) === button.innerText) {
         powerSupplyCost = product.price;
         costCalculations ();
-        document.querySelector('.psu-container').innerHTML = `<img src="${product.image}">`
+        document.querySelector('.js-psu-sidebar-container').innerHTML = `<img src="${product.image}">`
       }
     });
   });
 });
 
+// ==================== Case ====================
+
 let caseListHTML = '';
 
 caseTower.forEach ((product) => {
   caseListHTML += `
-  <div class="css-case-button">
-    <p class="case-button">
+  <div class="case-container">
+    <p class="case-button js-case-button">
       ${product.name} ${product.type}
     </p>
     <p class="case-info">
-      Price: &#x20B9; ${product.price}
+      Price: &#x20B9; ${formatCurrency(product.price)}
     </p>
   </div>
   `
@@ -367,10 +382,10 @@ caseTower.forEach ((product) => {
 
 document.querySelector('.js-case-options').innerHTML = caseListHTML;
 
-const caseListButton = document.querySelectorAll('.case-button');
-caseListButton.forEach ((button) => {
+const caseListButtons = document.querySelectorAll('.js-case-button');
+caseListButtons.forEach ((button) => {
   button.addEventListener('click',() => {
-    caseListButton.forEach ((button) => {
+    caseListButtons.forEach ((button) => {
       if (button.classList.contains('selected-case')) {
         button.classList.remove('selected-case');
         button.classList.add('case-button');
@@ -384,27 +399,29 @@ caseListButton.forEach ((button) => {
 let caseCost = 0 ;
 
 caseTower.forEach ((product) => {
-  caseListButton.forEach ((button) => {
+  caseListButtons.forEach ((button) => {
     button.addEventListener ('click', () => {
       if ((product.name + product.type) === button.innerText) {
         caseCost = product.price;
         costCalculations ();
-        document.querySelector('.case-container').innerHTML = `<img src="${product.image}">`
+        document.querySelector('.js-case-sidebar-container').innerHTML = `<img src="${product.image}">`
       }
     });
   });
 });
 
+// ==================== Cpu cooler ====================
+
 let coolersListHTML =  '';
 
 coolers.forEach ((product) => {
   coolersListHTML += `
-  <div class="css-cooler-button">
-    <p class="cooler-button">
+  <div class="cooler-container">
+    <p class="cooler-button js-cooler-button">
       ${product.manufacturer} ${product.name} 
     </p>
     <p class="cooler-info">
-      ${product.info} <br> Price: &#x20B9; ${product.price}
+      ${product.info} <br> Price: &#x20B9; ${formatCurrency(product.price)}
     </p>
   </div>
   `
@@ -412,10 +429,11 @@ coolers.forEach ((product) => {
 
 document.querySelector('.js-cooler-options').innerHTML = coolersListHTML;
 
-const coolersListButton = document.querySelectorAll('.cooler-button');
-coolersListButton.forEach ((button) => {
+const coolersListButtons = document.querySelectorAll('.js-cooler-button');
+
+coolersListButtons.forEach ((button) => {
   button.addEventListener('click',() => {
-    coolersListButton.forEach ((button) => {
+    coolersListButtons.forEach ((button) => {
       if (button.classList.contains('selected-cooler')) {
         button.classList.remove('selected-cooler');
         button.classList.add('cooler-button');
@@ -429,12 +447,12 @@ coolersListButton.forEach ((button) => {
 let coolerCost = 0;
 
 coolers.forEach ((product) => {
-  coolersListButton.forEach ((button) => {
+  coolersListButtons.forEach ((button) => {
     button.addEventListener('click', () => {
       if ((product.manufacturer + product.name) === button.innerText) {
         coolerCost = product.price;
         costCalculations ();
-        document.querySelector('.cooler-container').innerHTML = `<img src="${product.image}">`
+        document.querySelector('.js-cooler-sidebar-container').innerHTML = `<img src="${product.image}">`
       }
     });
   });
@@ -455,8 +473,8 @@ let costSummaryHTML = `
     <p>
       Motherboard :
     </p>
-    <p>
-      &#x20B9; ${motherboardCost}
+    <p class="cost">
+      &#x20B9; ${formatCurrency(motherboardCost)}
     </p>
   </div>
 
@@ -464,8 +482,8 @@ let costSummaryHTML = `
     <p>
       Processor :
     </p>
-    <p>
-      &#x20B9; ${processorCost}
+    <p class="cost">
+      &#x20B9; ${formatCurrency(processorCost)}
     </p>
   </div>
 
@@ -473,8 +491,8 @@ let costSummaryHTML = `
     <p>
       Graphics Card :
     </p>
-    <p>
-      &#x20B9; ${graphicsCardCost}
+    <p class="cost"> 
+      &#x20B9; ${formatCurrency(graphicsCardCost)}
     </p>
   </div>
 
@@ -482,8 +500,8 @@ let costSummaryHTML = `
     <p>
       Storage : 
     </p>
-    <p>
-      &#x20B9; ${storageCost}
+    <p class="cost">
+      &#x20B9; ${formatCurrency(storageCost)}
     </p>
   </div>
 
@@ -491,8 +509,8 @@ let costSummaryHTML = `
     <p>
       Memory :
     </p>
-    <p>
-      &#x20B9;  ${memoryCost}
+    <p class="cost">
+      &#x20B9;  ${formatCurrency(memoryCost)}
     </p>
   </div>
   
@@ -500,8 +518,8 @@ let costSummaryHTML = `
     <p> 
       Power Supply :
     </p>
-    <p>
-      &#x20B9; ${powerSupplyCost}
+    <p class="cost">
+      &#x20B9; ${formatCurrency(powerSupplyCost)}
     </p>
   </div>
 
@@ -509,8 +527,8 @@ let costSummaryHTML = `
     <p>
       Case  :
     </p>
-    <p>
-      &#x20B9; ${caseCost}
+    <p class="cost">
+      &#x20B9; ${formatCurrency(caseCost)}
     </p>
   </div>
 
@@ -518,8 +536,8 @@ let costSummaryHTML = `
     <p>
       Cooler  :
     </p>
-    <p>
-      &#x20B9; ${coolerCost}
+    <p class="cost">
+      &#x20B9; ${formatCurrency(coolerCost)}
     </p>
   </div>
 
@@ -527,13 +545,18 @@ let costSummaryHTML = `
     <p>
       Total :
     </p>
-    <p>
-      &#x20B9; ${totalCost}
+    <p class="cost">
+      &#x20B9; ${formatCurrency(totalCost)}
     </p>
   </div>
 `;
 
 document.querySelector('.js-section-2').innerHTML = costSummaryHTML;
+}
+
+function formatCurrency (cost) {
+  let costString = cost.toLocaleString("en-IN", {style:"currency", currency: "INR", maximumFractionDigits: 0 });
+  return costString.substring(1)
 }
 
 document.querySelectorAll('.sidebar-button').forEach ((button) => {

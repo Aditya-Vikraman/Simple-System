@@ -2,6 +2,7 @@ const storage = [
   {
     name: 'Samsung 990 Pro SSD ',
     space: '4-TB ',
+    formFactor: 'M.2 ',
     interface: 'PCIe 4.0 x4 NVMe',
     price: 35500,
     image: 'images/products/storage/Samsung-990-Pro-4-TB.jpg'
