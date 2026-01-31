@@ -559,18 +559,18 @@ function formatCurrency (cost) {
   return costString.substring(1)
 }
 
-document.querySelectorAll('.sidebar-button').forEach ((button) => {
+document.querySelectorAll('.js-sidebar-button').forEach ((button) => {
   button.addEventListener('click', () => {
-    document.querySelector('.image-box').innerHTML = `
+    document.querySelector('.js-image-box').innerHTML = `
     <div class="overlay">
-      ${button.innerHTML};
-      <P class="close-button">
+      ${button.innerHTML}
+      <P class="close-button js-close-button">
         X
       </P>
     </div>
     `;
-    document.querySelector('.close-button').addEventListener ('click', () => {
-      document.querySelector('.image-box').innerHTML = '';
+    document.querySelector('.js-close-button').addEventListener ('click', () => {
+      document.querySelector('.js-image-box').innerHTML = '';
     });
   });
 });

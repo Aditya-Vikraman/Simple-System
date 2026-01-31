@@ -6,10 +6,11 @@
 
 .build-grid {
   display: grid;
-  grid-template-columns: 1fr 350px;
+  grid-template-columns: 1fr 300px;
+  column-gap: 5px;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1070px) {
   .build-grid {
     grid-template-columns: 1fr;
   }
@@ -112,7 +113,7 @@
 .section-2 {
   border : 1px solid rgb(220, 220, 220);
   padding: 5px;
-  width: 300px;
+  /* width: 300px; */
   max-width: 300px;
 }
 
@@ -121,6 +122,7 @@
     position: fixed;
     top: 68px;
     right: 10px;
+    width: 300px;
   }
 }
 
@@ -163,14 +165,6 @@
   background-color: rgb(100, 100, 100);
 }
 
-@media (max-width: 575px) {
-  .build-sidebar {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-}
-
 .sidebar-button {
   display: flex;
   flex-direction: column;
@@ -187,20 +181,16 @@
   margin: 5px 10px;
 }
 
-.build-sidebar img {
-  width: 60px;
-  height: 55px;
-  object-fit: cover;
-  cursor: pointer;
-}
-
 @media (max-width: 575px) {
   .build-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     width: 90px;
   }
 
   .sidebar-button {
-    height: 50px;
+    height: 55px;
     margin: 10px 15px;
   }
 
@@ -208,6 +198,13 @@
     margin: 10px 5px;
   }
 
+}
+
+.build-sidebar img {
+  width: 60px;
+  height: 55px;
+  object-fit: cover;
+  cursor: pointer;
 }
 
 /* ================= overlay image ================= */

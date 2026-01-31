@@ -1,24 +1,27 @@
+body {
+  padding-left: 0px;
+}
+
 .products-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  column-gap: 5px;
 }
 
-@media (max-width: 575px) {
-  body {
-    padding-left: 0;
-  }
+@media (max-width: 705px) {
   .products-grid {
     grid-template-columns: 1fr;
-    margin-left: auto;
-    margin-right: auto;
   }
 } 
 
 .product-container {
   border: 1px solid rgb(200, 200, 200);
+  width:100%;
   max-width: 510px;
   display: inline-block;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .product-grid {
@@ -31,11 +34,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
 }
 
-.product-image-container img {
+.product-image {
   max-height: 209px;
+  cursor: pointer;
 }
 
 .info-grid div {
@@ -75,7 +78,10 @@
 
 .price {
   font-family: Roboto, Arial;  
+  padding: 10px;
 }
+
+/* ================= overlay image ================= */
 
 .overlay {
   background-color: rgba(200, 200, 200, 0.8);
@@ -106,33 +112,36 @@
   cursor: pointer;
 }
 
-.mail-icon-image {
-  width: 30px;
-  cursor: pointer;
-  position: relative;
+/* ================= info ================= */
+
+.info-pop {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-right:10px;
 }
 
 .mail-icon-image-container {
   position: relative;
 }
 
-.mail-image {
-  width: 200px;
-}
-
-.info-pop {
-  display: flex;
-  justify-content: right;
-  align-items: center;
+.mail-icon-image {
+  width: 30px;
+  cursor: pointer;
+  position: relative;
 }
 
 .mail-image-container {
   position: absolute;
-  top: -35px;
+  top: -15px;
   left: -200px;
   opacity: 0;
   transition: opacity 0.15s;
   pointer-events: none;
+}
+
+.mail-image {
+  width: 200px;
 }
 
 .mail-icon-image-container:hover .mail-image-container {

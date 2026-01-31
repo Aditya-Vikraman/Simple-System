@@ -18,8 +18,6 @@ searchElement.addEventListener('keydown', (event) => {
 const url = new URL (window.location.href);
 const search = url.searchParams.get('search');
 
-console.log(search);
-
 let filteredLaptops = laptops
 
 if (search) {
@@ -44,7 +42,7 @@ productListHTML += `
   <div class="product-container">
     <div class="product-grid">
       <div class="product-image-container js-product-image-container">
-        <img src="${product.image}">
+        <img class="product-image js-product-image" src="${product.image}">
       </div>
       <div class="info-grid">
         <div class="laptop-name">
@@ -107,11 +105,11 @@ function formatCurrency (cost) {
 
 document.querySelector('.js-products-grid').innerHTML = productListHTML;
 
-document.querySelectorAll('.js-product-image-container').forEach ((button) => {
-  button.addEventListener('click', () => {
+document.querySelectorAll('.js-product-image').forEach ((image) => {
+  image.addEventListener('click', (event) => {
     document.querySelector('.js-image-box').innerHTML = `
     <div class="overlay">
-      ${button.innerHTML};
+      <img src="${event.target.src}"/>
       <P class="close-button js-close-button">
         X
       </P>
