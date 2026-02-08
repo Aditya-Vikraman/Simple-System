@@ -14,6 +14,10 @@ body {
   }
 } 
 
+.search-failed {
+  font-weight: bold;
+}
+
 .product-container {
   border: 1px solid rgb(200, 200, 200);
   width:100%;
