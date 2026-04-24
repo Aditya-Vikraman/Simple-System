@@ -8,11 +8,13 @@ body {
   /* padding-left: 100px; */
 }
 
+/*
 @media (max-width: 575px) {
   .ss-text {
     display: inline;
   }
 }
+*/
 
 .brand-photo-container, .processor-name-photo-container {
   display: flex;
