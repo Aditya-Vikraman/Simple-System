@@ -2,9 +2,15 @@ p {
   margin-bottom: 10px;
 }
 
+body {
+  padding-top: 120px;
+  padding-left: 0px;
+  /* padding-left: 100px; */
+}
+
 @media (max-width: 575px) {
-  body {
-    padding-left: 100px;
+  .ss-text {
+    display: inline;
   }
 }
 

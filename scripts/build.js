@@ -62,6 +62,14 @@ motherboard.forEach ((product) => {
    });
 });
 
+document.querySelector('.js-motherboard-sidebar-container').addEventListener('click', () => {
+  console.log('clicked')
+  document.querySelector('.js-motherboard-section').scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  })
+})
+
 // ==================== processor ====================
 
 let processorListHTML = '';
@@ -124,6 +132,14 @@ processor.forEach ((product) => {
     })
   });
 });
+
+document.querySelector('.js-cpu-sidebar-container').addEventListener('click', () => {
+  console.log('clicked')
+  document.querySelector('.js-cpu-section').scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  })
+})
 
 // ==================== GPU ====================
 
@@ -189,6 +205,14 @@ graphicsCard.forEach ((product) => {
   });
 });
 
+document.querySelector('.js-gpu-sidebar-container').addEventListener('click', () => {
+  console.log('clicked')
+  document.querySelector('.js-gpu-section').scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  })
+})
+
 // ==================== storage ====================
 
 let storageListHTML = '';
@@ -251,6 +275,14 @@ storage.forEach ((product) => {
     });
   });
 });
+
+document.querySelector('.js-storage-sidebar-container').addEventListener('click', () => {
+  console.log('clicked')
+  document.querySelector('.js-storage-section').scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  })
+})
 
 // ==================== RAM ====================
 
@@ -316,6 +348,14 @@ memory.forEach ((product) => {
   });
 });
 
+document.querySelector('.js-ram-sidebar-container').addEventListener('click', () => {
+  console.log('clicked')
+  document.querySelector('.js-ram-section').scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  })
+})
+
 // ==================== PSU ====================
 
 let  powerSupplyListHTML = '';
@@ -362,6 +402,14 @@ powerSupply.forEach ((product) => {
     });
   });
 });
+
+document.querySelector('.js-psu-sidebar-container').addEventListener('click', () => {
+  console.log('clicked')
+  document.querySelector('.js-psu-section').scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  })
+})
 
 // ==================== Case ====================
 
@@ -410,6 +458,14 @@ caseTower.forEach ((product) => {
   });
 });
 
+document.querySelector('.js-case-sidebar-container').addEventListener('click', () => {
+  console.log('clicked')
+  document.querySelector('.js-case-section').scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  })
+})
+
 // ==================== Cpu cooler ====================
 
 let coolersListHTML =  '';
@@ -457,6 +513,16 @@ coolers.forEach ((product) => {
     });
   });
 });
+
+document.querySelector('.js-cooler-sidebar-container').addEventListener('click', () => {
+  console.log('clicked')
+  document.querySelector('.js-cooler-section').scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  })
+})
+
+// ==================== Cost Summary ====================
 
 let totalCost = 0;
 
@@ -558,6 +624,8 @@ function formatCurrency (cost) {
   let costString = cost.toLocaleString("en-IN", {style:"currency", currency: "INR", maximumFractionDigits: 0 });
   return costString.substring(1)
 }
+
+// ==================== Overlay ====================
 
 document.querySelectorAll('.js-sidebar-button').forEach ((button) => {
   button.addEventListener('click', () => {
