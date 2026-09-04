@@ -6,7 +6,7 @@ motherboard.forEach ((product) => {
   motherboardListHTML += `
     <div class="motherboard-container js-motherboard-container motherboard-container-${product.socket}">
       <p class="motherboard-button js-motherboard-button">
-      ${product.name} ( ${product.socket})
+      ${product.name} (${product.socket} Socket) (${product.size})
       </p>
       <P class="motherboard-info">
       ${product.info} <br> Price: &#x20B9; ${formatCurrency(product.price)}
@@ -53,7 +53,7 @@ let motherboardCost = 0;
 motherboard.forEach ((product) => {
   motherboardListButtons.forEach ((button) => {
     button.addEventListener('click', () => {
-      if ((product.name + `( ${product.socket})`) === button.innerText) {
+      if ([product.name, product.socket].every(value => button.innerText.includes(value))) {
         motherboardCost = product.price;
         costCalculations ();
         document.querySelector('.js-motherboard-sidebar-container').innerHTML = `<img src="${product.image}">`
@@ -78,7 +78,7 @@ processor.forEach ((product) => {
   processorListHTML += `
     <div class="cpu-container js-cpu-container cpu-container-${product.socket}">
       <p class="cpu-button js-cpu-button">
-        ${product.brand} ${product.name} ${product.core} ( ${product.socket})
+        ${product.brand} ${product.name} ${product.core} (${product.socket})
       </p>
       <p class="cpu-info">
         ${product.info} <br> Price: &#x20B9; ${formatCurrency(product.price)}
@@ -124,7 +124,7 @@ let processorCost = 0;
 processor.forEach ((product) => {
   cpuListButtons.forEach ((button) => {
     button.addEventListener ('click', () => {
-      if ((product.brand + product.name + product.core + `( ${product.socket})`) === button.innerText) {
+      if ([product.brand, product.name, product.core, product.socket].every(value => button.innerText.includes(value))) {
         processorCost = product.price;
         costCalculations ();
         document.querySelector('.js-cpu-sidebar-container').innerHTML = `<img src="${product.image}">`
@@ -196,7 +196,7 @@ let graphicsCardCost = 0;
 graphicsCard.forEach ((product) => {
   gpuListButtons.forEach ((button) => {
     button.addEventListener ('click', () => {
-      if ((product.manufacturer + product.brand + product.name) === button.innerText) {
+      if ([product.manufacturer, product.brand, product.name].every(value => button.innerText.includes(value))) {
         graphicsCardCost = product.price;
         costCalculations ();
         document.querySelector('.js-gpu-sidebar-container').innerHTML = `<img src="${product.image}">`
@@ -267,7 +267,7 @@ let storageCost = 0;
 storage.forEach ((product) => {
   storageListButtons.forEach ((button) => {
     button.addEventListener ('click', () => {
-      if ((product.name + product.space + product.formFactor + product.interface) === button.innerText) {
+      if ([product.name, product.space, product.formFactor, product.interface].every(value => button.innerText.includes(value))) {
         storageCost = product.price;
         costCalculations ();
         document.querySelector('.js-storage-sidebar-container').innerHTML = `<img src="${product.image}">`
@@ -339,7 +339,7 @@ let memoryCost = 0;
 memory.forEach ((product) => {
   memoryListButtons.forEach ((button) => {
     button.addEventListener ('click', () => {
-      if ((product.name + product.space + product.type) === button.innerText) {
+      if ([product.name, product.space, product.type].every(value => button.innerText.includes(value))) {
         memoryCost = product.price;
         costCalculations ();
         document.querySelector('.js-ram-sidebar-container').innerHTML = `<img src="${product.image}">`
@@ -394,7 +394,7 @@ let powerSupplyCost = 0;
 powerSupply.forEach ((product) => {
   powerSupplyListButtons.forEach ((button) => {
     button.addEventListener ('click', () => {
-      if ((product.manufacturer + product.name + product.wattage + product.efficiency + product.modular) === button.innerText) {
+      if ([product.manufacturer, product.name, product.wattage, product.efficiency, product.modular].every(value => button.innerText.includes(value))) {
         powerSupplyCost = product.price;
         costCalculations ();
         document.querySelector('.js-psu-sidebar-container').innerHTML = `<img src="${product.image}">`
@@ -449,7 +449,7 @@ let caseCost = 0 ;
 caseTower.forEach ((product) => {
   caseListButtons.forEach ((button) => {
     button.addEventListener ('click', () => {
-      if ((product.name + product.type) === button.innerText) {
+      if ([product.name, product.type].every(value => button.innerText.includes(value))) {
         caseCost = product.price;
         costCalculations ();
         document.querySelector('.js-case-sidebar-container').innerHTML = `<img src="${product.image}">`
@@ -505,7 +505,7 @@ let coolerCost = 0;
 coolers.forEach ((product) => {
   coolersListButtons.forEach ((button) => {
     button.addEventListener('click', () => {
-      if ((product.manufacturer + product.name) === button.innerText) {
+      if ([product.manufacturer, product.name].every(value => button.innerText.includes(value))) {
         coolerCost = product.price;
         costCalculations ();
         document.querySelector('.js-cooler-sidebar-container').innerHTML = `<img src="${product.image}">`

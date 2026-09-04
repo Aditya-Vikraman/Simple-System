@@ -21,7 +21,9 @@ const search = url.searchParams.get('search');
 let filteredLaptops = laptops;
 
 if (search) {
-  const searchArray = search.split(" ");
+  const regexp = /\s|,\s/g;
+  const searchExp = search.replace(regexp, ",")
+  const searchArray = searchExp.split(",");
 
   const newArray = filteredLaptops.filter(checkLaptops);
 
