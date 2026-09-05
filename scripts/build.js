@@ -81,7 +81,9 @@ processor.forEach ((product) => {
         ${product.brand} ${product.name} ${product.core} (${product.socket})
       </p>
       <p class="cpu-info">
-        ${product.info} <br> Price: &#x20B9; ${formatCurrency(product.price)}
+        ${product.info} 
+        <br> Power: ${product.power}
+        <br> Price: &#x20B9; ${formatCurrency(product.price)}
       </p>
     </div>
   `
@@ -152,7 +154,9 @@ graphicsCard.forEach ((product) => {
         ${product.manufacturer} ${product.brand} ${product.name}
       </P>
       <p class="gpu-info">
-      ${product.info} <br> Price: &#x20B9; ${formatCurrency(product.price)}
+      ${product.info}, ${product.power}
+      <br> Recommended PSU: ${product.psu}
+      <br> Price: &#x20B9; ${formatCurrency(product.price)}
       </p>
     </div>
   `;
@@ -477,7 +481,9 @@ coolers.forEach ((product) => {
       ${product.manufacturer} ${product.name} 
     </p>
     <p class="cooler-info">
-      ${product.info} <br> Price: &#x20B9; ${formatCurrency(product.price)}
+      ${product.info} 
+      <br> ${product.tdp} TDP
+      <br> Price: &#x20B9; ${formatCurrency(product.price)}
     </p>
   </div>
   `

@@ -1,14 +1,15 @@
 const cpuHTML = `
 <p>
-  For decades, Intel and AMD have made the most trusted CPUs on the market, but the thicket of model numbers, names, and generations can make it challenging to choose the best processor (CPU) for your Personel Computer (PC).
+  For decades, Intel and AMD have made the most trusted CPUs on the market, but the thicket of model numbers, names, and generations can make it challenging to choose the best processor (CPU) for your Personal Computer (PC).
   
   <p>
-  For <b>Intel</b>, choose a 12th or the latest 13th gen processors. The 12th gen supports DDR5 (4800 MT/s) and PCIe 5.0, where as the 11th gen supports only upto DDR4 and PCIe 4.0.
-  The 13th gen supports DDR5 up to 5600 MT/s. The 11th, 12th and 13th gen support thunderbolt 4.
+  For <b>Intel</b>, the 12th to 14th gen processors supports DDR5 & DDR4  and PCIe 5.0, where as the 11th gen supports only upto DDR4 and PCIe 4.0.
+  . From 11th  gen onwards there is support for thunderbolt 4. These older processors have can have upto four tiers based on its performance the low tier i3, the mid tier i5, the upper tier i7 and the top tier i9.
+  The higher generation represents the newer processor.
   <p>
 
   <p>
-  For <b>AMD</b>, choose 5th gen or the latest 7th gen processors for desktop. The 6th gen (mobile only) supports  only DDR5 (5200 MT/s) and PCIe 4.0. The 7th gen supports DDR5 (5200 MT/s) and PCIe 5.0. Both 6th and 7th gen support USB 4.0.
+  For <b>AMD</b>, the 5th gen processors support DDR4 and from 7th gen onwards they only support DDR5. The 6th gen (mobile only) supports  only DDR5 (5200 MT/s) and PCIe 4.0. From 7th gen onward there is supports for PCIe 5.0. From 6th gen onward there is support for USB 4.0.
   <P>
 
   Below, we&#39;ll look at naming conventions, so when you see Intel Core™ i5-12450HX or AMD Ryzen 5700U, you&#39;ll know exactly what each part of the name means.
@@ -37,7 +38,7 @@ The Intel naming scheme starts with the processorcs brand—the overall product 
   Brand Modifier
 </p>
 <p>
-  Intel Core processor series include a brand modifier before the remaining parts of the model number. Today, the Intel Core processor series includes the brand modifiers i3, i5, i7, and i9. Higher brand modifier numbers offer a higher level of performance. For example, within a given processor family, an i9 will outperform an i7, which will outperform an i5, and outperform i3.
+  Intel Core processor series include a brand modifier before the remaining parts of the model number. Today, the Intel Core processor series includes the brand modifiers i3, i5, i7, and i9. Higher brand modifier numbers offer a higher level of performance. For example, within a given processor family, an i9 will outperform an i7, which will outperform an i5, and i5 will out perform an i3.
 </p>
 
 <p class="topic">
@@ -217,6 +218,25 @@ The Intel naming scheme starts with the processorcs brand—the overall product 
   </div>
 </div>
 
+<p class="topic">
+  New Name Scheme for Intel
+</p>
+
+<p>
+The Intel Core Ultra processor family includes the Intel Core Ultra 9 processor, Intel Core Ultra 7 processor, and Intel Core Ultra 5 processor, indicating a performance tier.
+<br>
+Intel Core Ultra processors have a SKU number 1 or 2, representing the generation, respectively.
+<br>
+Intel Core Ultra mobile processors have suffixes H, U, or V.
+<br>
+Intel Core Ultra desktop processors have suffixes K, F, KF, or T.
+</p>
+
+<div class="processor-name-photo-container">
+  <img class="intel-new-name-image" src="images/intel-ultra-naming-scheme.jpg">
+</div>
+
+
 <div class="brand-photo-container">
   <img class="amd-logo-image" src="images/amd.png">
 </div>
@@ -262,10 +282,10 @@ The H-class CPUs in the Ryzen lineup are meant for mainstream power notebooks, g
 </p>
 
 <p class="topic">
-  New Name Scheme
+  New Name Scheme for AMD
 </p>
 <p>
-  The new name scheme will be used to demarcate its new Zen 4 based Ryzen 7000 series processors from 2023.
+  The new name scheme will be used to demarcate its new Zen 4 based Ryzen 7000 series mobile processors from 2023.
 </p>
 
 <div class="processor-name-photo-container">

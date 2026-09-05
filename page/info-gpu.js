@@ -22,7 +22,4 @@ const gpuHTML = `
     When it comes to GPUs designed for laptops, Nvidia is the clear market leader thanks to its ability to produce thinner, higher-performance cards at competitive prices. For this reason, most laptops come equipped with an Nvidia GPU.
   </p>
 
-  <p>
-    If you decided on <b>nvidia</b>, the RTX 3050 is a good choise, or if you decided on <b>AMD</b>, the Radeon RX 6650 XT is a good choise.
-  </p>
 `;
