@@ -70,8 +70,8 @@ if(filteredLaptops.length === 0) {
     productListHTML += `
       <div class="product-container">
         <div class="product-grid">
-          <div class="product-image-container js-product-image-container">
-            <img class="product-image js-product-image" src="${product.image}">
+          <div class="product-image-container">
+            <img class="product-image js-product-image" src="${product.image}"/>
           </div>
           <div class="info-grid">
             <div class="laptop-name">
@@ -139,9 +139,9 @@ document.querySelectorAll('.js-product-image').forEach ((image) => {
     document.querySelector('.js-image-box').innerHTML = `
     <div class="overlay">
       <img src="${event.target.src}"/>
-      <P class="close-button js-close-button">
+      <p class="close-button js-close-button">
         X
-      </P>
+      </p>
     </div>
     `;
     document.querySelector('.js-close-button').addEventListener ('click', () => {

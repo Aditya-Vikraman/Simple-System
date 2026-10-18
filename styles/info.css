@@ -1,11 +1,9 @@
-p {
-  margin-bottom: 10px;
-}
-
 body {
   padding-top: 120px;
-  padding-left: 0px;
-  /* padding-left: 100px; */
+}
+
+p {
+  margin-bottom: 10px;
 }
 
 /*

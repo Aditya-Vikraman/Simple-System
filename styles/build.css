@@ -1,3 +1,7 @@
+body {
+  padding-left: 120px;
+}
+
 @media (max-width: 575px) {
   body {
     padding-top: 120px;
@@ -122,6 +126,7 @@
   padding: 5px;
   /* width: 300px; */
   max-width: 300px;
+  box-sizing: border-box;
 }
 
 @media (min-width: 1070px) {

@@ -1,7 +1,7 @@
 const gpuHTML = `
   <div class="gpu-image-container">
-    <img class="nvidia-logo" src="images/nvidia.png">
-    <img class="amd-radeon-logo" src="images/amd-radeon.png">
+    <img class="nvidia-logo" src="images/nvidia.png"/>
+    <img class="amd-radeon-logo" src="images/amd-radeon.png"/>
   </div>
 
   <p>

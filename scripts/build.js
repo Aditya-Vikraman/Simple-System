@@ -8,7 +8,7 @@ motherboard.forEach ((product) => {
       <p class="motherboard-button js-motherboard-button">
       ${product.name} (${product.socket} Socket) (${product.size})
       </p>
-      <P class="motherboard-info">
+      <p class="motherboard-info">
       ${product.info} <br> Price: &#x20B9; ${formatCurrency(product.price)}
       </p> 
     </div>
@@ -63,7 +63,6 @@ motherboard.forEach ((product) => {
 });
 
 document.querySelector('.js-motherboard-sidebar-container').addEventListener('click', () => {
-  console.log('clicked')
   document.querySelector('.js-motherboard-section').scrollIntoView({
     behavior: 'smooth',
     block: 'center'
@@ -152,11 +151,11 @@ graphicsCard.forEach ((product) => {
     <div class="gpu-container js-gpu-container gpu-container-${product.brand}">
       <p class="gpu-button js-gpu-button">
         ${product.manufacturer} ${product.brand} ${product.name}
-      </P>
+      </p>
       <p class="gpu-info">
-      ${product.info}, ${product.power}
-      <br> Recommended PSU: ${product.psu}
-      <br> Price: &#x20B9; ${formatCurrency(product.price)}
+        ${product.info}, ${product.power}
+        <br> Recommended PSU: ${product.psu}
+        <br> Price: &#x20B9; ${formatCurrency(product.price)}
       </p>
     </div>
   `;
@@ -226,7 +225,7 @@ storage.forEach ((product) => {
   <div class="storage-container js-storage-container storage-container-${product.space}">
     <p class="storage-button js-storage-button">
       ${product.name} ${product.space} ${product.formFactor} ${product.interface}
-    </P>
+    </p>
     <p class="storage-info">
       Price: &#x20B9; ${formatCurrency(product.price)}
     </p>
@@ -297,7 +296,7 @@ memory.forEach ((product) => {
     <div class="ram-container js-ram-container ram-container-${product.type}">
       <p class="ram-button js-ram-button">
         ${product.name} ${product.space} ${product.type}
-      </P>
+      </p>
       <p class="ram-info">
         ${product.info} <br> Price: &#x20B9; ${formatCurrency(product.price)}
       </p>

@@ -10,9 +10,9 @@ const connectivityHTML = `
     If your motherboard does not feature Bluetooth or a Wi&ndash;Fi card, you can easily install one by getting a simple PCIe Wi&ndash;Fi expansion card.
   </p>
 
-  <P class="topic">
+  <p class="topic">
     USB 4.0 & Thunderbolt 4
-  </P>
+  </p>
   <p>
    A USB port are most common type of connectors provided on a motherboard.<br>
     The latest is the USB 4.0 Type&ndash;c, where c refers to the form factor (oval). USB 3.3 is also type&ndash;c.

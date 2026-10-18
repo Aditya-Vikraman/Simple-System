@@ -6,9 +6,9 @@ const displayHTML = `
     Most common computer screens are of two types IPS LCD display and LED display. IPS panels are powered by a backlight, so they produce brighter images. The image quality of IPS panels is better compared to LED. However, IPS panel consume more power, generate heat and have lower contrast ratio.<br>
     LED panels have high contrast ratio and refresh rates.
   </p>
-  <P class="topic">
+  <p class="topic">
     Screen Size
-  </P>
+  </p>
   <p>
     For gaming laptops it is better to have a large screen of 16 inches (measured diagonaly) or higher. Else you can opt for a smaller size for portability.<br>
     For desktop users, ideal screen size should be around 24 - 34 inches.

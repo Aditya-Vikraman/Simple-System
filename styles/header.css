@@ -91,6 +91,7 @@
 .right-section {
   display: flex;
   align-items: center;
+  margin-left: auto;
 }
 
 .info-button, .build-button, .laptop-button {

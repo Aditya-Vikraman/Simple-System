@@ -27,13 +27,13 @@ const caseTower = [
     name: 'Lian Li Lancool 216 ARGB ',
     type: 'E-ATX Mid Tower',
     price: 8200,
-    image: 'images/products/case/Lian Li-Lancool-216-ARGB.jpg',
+    image: 'images/products/case/Lian-Li-Lancool-216-ARGB.jpg',
   },
   {
     name: 'Lian Li Lancool 207 White ARGB ',
     type: 'ATX Mid Tower',
     price: 7700,
-    image: 'images/products/case/Lian Li-Lancool-207-White-ARGB.jpg',
+    image: 'images/products/case/Lian-Li-Lancool-207-White-ARGB.jpg',
   },
   {
     name: 'Antec CX800 ARGB ',
