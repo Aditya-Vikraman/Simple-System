@@ -1,7 +1,11 @@
 const memoryStorageHTML = `
-  <p class="topic">
+  <h1 class="title">
+    Memory &amp; Storage
+  </h1>
+  
+  <h2 class="topic">
     Memory (RAM)
-  </p>
+  </h2>
   <p>
    RAM is a computing acronym that stands for Random&ndash;Access memory. In essence, RAM is your pc&#39;s short&ndash;term memory. It&#39;s where the data is stored that your computer processor needs to run your applications and open your files.
   </p>
@@ -13,9 +17,9 @@ const memoryStorageHTML = `
     DDR4 SDRAM (Double Data Rate 4 Synchronous Dynamic Random&ndash;Access Memory) is the most commonly used RAM. But, the latest processors use DDR5.
   </p>
 
-  <p class="topic">
+  <h2 class="topic">
     Storage
-  </p>
+  </h2>
   <p>
     The most common type of storage devices are HDD (Hard&ndash;Disk Drive) and SDD (Solid&ndash;State Drive).
     These storage devices are essentialy your pc&#39;s long term memory.<br>

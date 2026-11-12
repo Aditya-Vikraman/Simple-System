@@ -21,19 +21,19 @@
     <header class="header">
       <div class="logo">
         <a href="index.html">
-          <img class="ss-logo" src="images/ss-logo.png"/>
-          <img class="ss-text" src="images/ss-text.png"/>
+          <img class="ss-logo" src="images/ss-logo.png" alt="Simple System logo">
+          <img class="ss-text" src="images/ss-text.png" alt="Simple System logo text">
         </a>
       </div>
 
       <div class="middle-section">
-        <input type="text" class="search-bar js-search-bar" placeholder="Filter Laptops"/>
-        <button class="search-button js-search-button">
-          <img class="search-icon" src="images/icons/search-icon-white.png"/>
+        <input aria-label="filter laptops by specification" type="text" class="search-bar js-search-bar" placeholder="Filter Laptops"/>
+        <button aria-label="filter" class="search-button js-search-button">
+          <img class="search-icon" src="images/icons/search-icon-white.png" alt="search icon">
         </button>
       </div>
 
-      <div class="right-section">
+      <nav class="right-section">
         <a class="laptop-button" href="index.html">
             Laptop
         </a>
@@ -43,7 +43,7 @@
         <a class="build-button" href="build.html">
             Build
         </a>
-      </div>
+      </nav>
     </header>
     <main>
       <div class="products-grid js-products-grid">
@@ -53,14 +53,14 @@
       </div>
     </main>
 
-    <div class="mail-pop">
+    <footer class="mail-pop">
       <div class="mail-icon-image-container">
-        <img class="mail-icon-image" src="images/icons/mail-icon.png"/> 
+        <img class="mail-icon-image" src="images/icons/mail-icon.png" alt="mail icon"> 
         <div class="mail-image-container">
-          <img class="mail-image" src="images/mail.png"/>
+          <img class="mail-image" src="images/mail.png" alt="mail">
         </div>
       </div>
-    </div>
+    </footer>
 
     <script src="database/laptops.js"></script>
     <script src="scripts/home.js"></script>

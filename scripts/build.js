@@ -56,7 +56,7 @@ motherboard.forEach ((product) => {
       if ([product.name, product.socket].every(value => button.innerText.includes(value))) {
         motherboardCost = product.price;
         costCalculations ();
-        document.querySelector('.js-motherboard-sidebar-container').innerHTML = `<img src="${product.image}">`
+        document.querySelector('.js-motherboard-sidebar-container').innerHTML = `<img src="${product.image}" alt="selected motherboard">`
       }
     });
    });
@@ -128,14 +128,13 @@ processor.forEach ((product) => {
       if ([product.brand, product.name, product.core, product.socket].every(value => button.innerText.includes(value))) {
         processorCost = product.price;
         costCalculations ();
-        document.querySelector('.js-cpu-sidebar-container').innerHTML = `<img src="${product.image}">`
+        document.querySelector('.js-cpu-sidebar-container').innerHTML = `<img src="${product.image}" alt="selected processor">`
       }
     })
   });
 });
 
 document.querySelector('.js-cpu-sidebar-container').addEventListener('click', () => {
-  console.log('clicked')
   document.querySelector('.js-cpu-section').scrollIntoView({
     behavior: 'smooth',
     block: 'center'
@@ -202,14 +201,13 @@ graphicsCard.forEach ((product) => {
       if ([product.manufacturer, product.brand, product.name].every(value => button.innerText.includes(value))) {
         graphicsCardCost = product.price;
         costCalculations ();
-        document.querySelector('.js-gpu-sidebar-container').innerHTML = `<img src="${product.image}">`
+        document.querySelector('.js-gpu-sidebar-container').innerHTML = `<img src="${product.image}" alt="selected graphics card">`
       }
     });
   });
 });
 
 document.querySelector('.js-gpu-sidebar-container').addEventListener('click', () => {
-  console.log('clicked')
   document.querySelector('.js-gpu-section').scrollIntoView({
     behavior: 'smooth',
     block: 'center'
@@ -273,14 +271,13 @@ storage.forEach ((product) => {
       if ([product.name, product.space, product.formFactor, product.interface].every(value => button.innerText.includes(value))) {
         storageCost = product.price;
         costCalculations ();
-        document.querySelector('.js-storage-sidebar-container').innerHTML = `<img src="${product.image}">`
+        document.querySelector('.js-storage-sidebar-container').innerHTML = `<img src="${product.image}" alt="selected storage">`
       }
     });
   });
 });
 
 document.querySelector('.js-storage-sidebar-container').addEventListener('click', () => {
-  console.log('clicked')
   document.querySelector('.js-storage-section').scrollIntoView({
     behavior: 'smooth',
     block: 'center'
@@ -345,14 +342,13 @@ memory.forEach ((product) => {
       if ([product.name, product.space, product.type].every(value => button.innerText.includes(value))) {
         memoryCost = product.price;
         costCalculations ();
-        document.querySelector('.js-ram-sidebar-container').innerHTML = `<img src="${product.image}">`
+        document.querySelector('.js-ram-sidebar-container').innerHTML = `<img src="${product.image}" alt="selected memory">`
       }
     });
   });
 });
 
 document.querySelector('.js-ram-sidebar-container').addEventListener('click', () => {
-  console.log('clicked')
   document.querySelector('.js-ram-section').scrollIntoView({
     behavior: 'smooth',
     block: 'center'
@@ -400,14 +396,13 @@ powerSupply.forEach ((product) => {
       if ([product.manufacturer, product.name, product.wattage, product.efficiency, product.modular].every(value => button.innerText.includes(value))) {
         powerSupplyCost = product.price;
         costCalculations ();
-        document.querySelector('.js-psu-sidebar-container').innerHTML = `<img src="${product.image}">`
+        document.querySelector('.js-psu-sidebar-container').innerHTML = `<img src="${product.image}" alt="selected power supply">`
       }
     });
   });
 });
 
 document.querySelector('.js-psu-sidebar-container').addEventListener('click', () => {
-  console.log('clicked')
   document.querySelector('.js-psu-section').scrollIntoView({
     behavior: 'smooth',
     block: 'center'
@@ -455,14 +450,13 @@ caseTower.forEach ((product) => {
       if ([product.name, product.type].every(value => button.innerText.includes(value))) {
         caseCost = product.price;
         costCalculations ();
-        document.querySelector('.js-case-sidebar-container').innerHTML = `<img src="${product.image}">`
+        document.querySelector('.js-case-sidebar-container').innerHTML = `<img src="${product.image}" alt="selected case">`
       }
     });
   });
 });
 
 document.querySelector('.js-case-sidebar-container').addEventListener('click', () => {
-  console.log('clicked')
   document.querySelector('.js-case-section').scrollIntoView({
     behavior: 'smooth',
     block: 'center'
@@ -513,14 +507,13 @@ coolers.forEach ((product) => {
       if ([product.manufacturer, product.name].every(value => button.innerText.includes(value))) {
         coolerCost = product.price;
         costCalculations ();
-        document.querySelector('.js-cooler-sidebar-container').innerHTML = `<img src="${product.image}">`
+        document.querySelector('.js-cooler-sidebar-container').innerHTML = `<img src="${product.image}" alt="selected cooler">`
       }
     });
   });
 });
 
 document.querySelector('.js-cooler-sidebar-container').addEventListener('click', () => {
-  console.log('clicked')
   document.querySelector('.js-cooler-section').scrollIntoView({
     behavior: 'smooth',
     block: 'center'
@@ -637,11 +630,12 @@ document.querySelectorAll('.js-sidebar-button').forEach ((button) => {
     document.querySelector('.js-image-box').innerHTML = `
     <div class="overlay">
       ${button.innerHTML}
-      <P class="close-button js-close-button">
+      <button aria-label="close overlay image" class="close-button js-close-button">
         X
-      </P>
+      </button>
     </div>
     `;
+    document.querySelector('.js-close-button').focus()
     document.querySelector('.js-close-button').addEventListener ('click', () => {
       document.querySelector('.js-image-box').innerHTML = '';
     });

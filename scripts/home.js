@@ -68,10 +68,10 @@ if(filteredLaptops.length === 0) {
 } else {
   filteredLaptops.forEach ((product) => {
     productListHTML += `
-      <div class="product-container">
+      <article class="product-container">
         <div class="product-grid">
           <div class="product-image-container">
-            <img class="product-image js-product-image" src="${product.image}"/>
+            <img alt="laptop" class="product-image js-product-image" src="${product.image}"/>
           </div>
           <div class="info-grid">
             <div class="laptop-name">
@@ -122,7 +122,7 @@ if(filteredLaptops.length === 0) {
             </p>
           </div>
         </div>
-      </div>
+      </article>
     `
   });
 }
@@ -138,12 +138,13 @@ document.querySelectorAll('.js-product-image').forEach ((image) => {
   image.addEventListener('click', (event) => {
     document.querySelector('.js-image-box').innerHTML = `
     <div class="overlay">
-      <img src="${event.target.src}"/>
-      <p class="close-button js-close-button">
+      <img src="${event.target.src}" alt="laptop Enlarged">
+      <button aria-label="close overlay image" class="close-button js-close-button">
         X
-      </p>
+      </button>
     </div>
     `;
+    document.querySelector('.js-close-button').focus()
     document.querySelector('.js-close-button').addEventListener ('click', () => {
       document.querySelector('.js-image-box').innerHTML = '';
     });

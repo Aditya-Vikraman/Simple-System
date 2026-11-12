@@ -22,12 +22,12 @@
     <header class="header">
       <div class="logo">
         <a href="index.html">
-          <img class="ss-logo" src="images/ss-logo.png"/>
-          <img class="ss-text" src="images/ss-text.png"/>
+          <img class="ss-logo" src="images/ss-logo.png" alt="Simple System logo">
+          <img class="ss-text" src="images/ss-text.png" alt="Simple System logo text">
         </a>
       </div>
 
-      <div class="right-section">
+      <nav class="right-section">
         <a class="laptop-button" href="index.html">
             Laptop
         </a>
@@ -37,36 +37,61 @@
         <a class="build-button" href="build.html">
           Build
         </a>
-      </div>
+      </nav>
     </header>
  
-    <nav class="info-sidebar">
-      <div class="sidebar-link js-sidebar-link js-cpu">
-        <img src="images/icons/cpu-icon.png"/>
+    <div role="tablist" aria-label="select for information" class="info-sidebar">
+      <button 
+        role="tab"
+        aria-expanded="false"
+        aria-controls="contentRegion"
+        class="info-sidebar-button js-sidebar-button js-cpu"
+      >
+        <img src="images/icons/cpu-icon.png" alt="processor_icon">
         CPU
-      </div>
-      <div class="sidebar-link js-sidebar-link js-gpu">
-        <img src="images/icons/graphics-card-ion.png"/>
+      </button>
+      <button
+        role="tab" 
+        aria-expanded="false"
+        aria-controls="contentRegion"
+        class="info-sidebar-button js-sidebar-button js-gpu"
+      >
+        <img src="images/icons/graphics-card-ion.png" alt="graphic card icon">
         GPU
-      </div>
-      <div class="sidebar-link js-sidebar-link js-display">
-        <img src="images/icons/monitor-icon.png"/>
+      </button>
+      <button 
+        role="tab"
+        aria-expanded="false"
+        aria-controls="contentRegion"
+        class="info-sidebar-button js-sidebar-button js-display"
+      >
+        <img src="images/icons/monitor-icon.png" alt="display icon">
         Display
-      </div>
-      <div class="sidebar-link js-sidebar-link js-memory-storage">
-        <img src="images/icons/memory-slot-icon.png"/>
+      </button>
+      <button 
+        role="tab"
+        aria-expanded="false"
+        aria-controls="contentRegion"
+        class="info-sidebar-button js-sidebar-button js-memory-storage"
+      >
+        <img src="images/icons/memory-slot-icon.png" alt="memory and storage icon">
         Memory &amp; Storage
-      </div>
-      <div class="sidebar-link js-sidebar-link js-connectivity">
-        <img src="images/icons/connect-icon.png"/>
+      </button>
+      <button 
+        role="tab"
+        aria-expanded="false"
+        aria-controls="contentRegion"
+        class="info-sidebar-button js-sidebar-button js-connectivity"
+      >
+        <img src="images/icons/connect-icon.png" alt="connectivity icon">
         Connectivity
-      </div>
-    </nav>
+      </button>
+    </div>
   
-    <main class="js-content">
+    <main id="contentRegion" aria-live="assertive" class="js-content">
       <P>
         <b>
-          &#8679; Click on any tab of the nav bar above for information about each components. 
+          &#8679; Click any tab on the tab bar above for information about each components. 
         </b>
 
         <br>

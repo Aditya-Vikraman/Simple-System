@@ -21,12 +21,12 @@
     <header class="header">
       <div class="logo">
         <a href="index.html">
-          <img class="ss-logo" src="images/ss-logo.png"/>
-          <img class="ss-text" src="images/ss-text.png"/>
+          <img class="ss-logo" src="images/ss-logo.png" alt="Simple System logo">
+          <img class="ss-text" src="images/ss-text.png" alt="Simple System logo text">
         </a>
       </div>
   
-      <div class="right-section">
+      <nav class="right-section">
         <a class="laptop-button" href="index.html">
             Laptop
         </a>
@@ -36,208 +36,221 @@
         <a class="build-button" href="build.html">
             Build
         </a>
-      </div>
+      </nav>
     </header>
 
     <div class="build-sidebar">
       <div class="sidebar-button js-motherboard-sidebar-container js-sidebar-button">
-        <img src="./images/icons/motherboard-icon.png" />
+        <img src="./images/icons/motherboard-icon.png" alt="default motherboard icon">
+        <p>Please select a motherboard</p>
       </div>
       <div class="sidebar-button js-cpu-sidebar-container js-sidebar-button">
-        <img src="./images/icons/cpu-icon.png" />
+        <img src="./images/icons/cpu-icon.png" alt="default cpu icon">
+        <p>Please select a processor</p>
       </div>
       <div class="sidebar-button js-gpu-sidebar-container js-sidebar-button">
-        <img src="./images/icons/graphics-card-ion.png" />
+        <img src="./images/icons/graphics-card-ion.png" alt="default graphics card icon">
+        <p>Please select a graphics card</p>
       </div>
       <div class="sidebar-button js-storage-sidebar-container js-sidebar-button">
-        <img src="./images/icons/storage-icon.png" />
+        <img src="./images/icons/storage-icon.png" alt="default storage icon">
+        <p>Please select a storage</p>
       </div>
       <div class="sidebar-button js-ram-sidebar-container js-sidebar-button">
-        <img src="./images/icons/memory-slot-icon.png" />
+        <img src="./images/icons/memory-slot-icon.png" alt="default memory icon">
+        <p>Please select a memory</p>
       </div>
       <div class="sidebar-button js-psu-sidebar-container js-sidebar-button">
-        <img src="./images/icons/psu-icon.png" />
+        <img src="./images/icons/psu-icon.png" alt="default power supply icon">
+        <p>Please select a power supply</p>
       </div>
       <div class="sidebar-button js-case-sidebar-container js-sidebar-button">
-        <img src="./images/icons/case-icon.png" />
+        <img src="./images/icons/case-icon.png" alt="default case icon">
+        <p>Please select a case</p>
       </div>
       <div class="sidebar-button js-cooler-sidebar-container js-sidebar-button">
-        <img src="./images/icons/cooler-icon.png" />
+        <img src="./images/icons/cooler-icon.png" alt="default cooler icon">
+        <p>Please select a cooler</p>
       </div>
     </div>
 
     <main>
       <div class="build-grid">
-        <div class="section-1">
+        <section aria-label="components list" class="section-1">
           <h1>
             Select your components below to get an estimated price
           </h1>
-          <p class="sub-heading js-motherboard-section">
+          <h2 class="sub-heading js-motherboard-section">
             Motherboard
-          </p>
+          </h2>
 
-          <div class="selector">
+          <fieldset class="selector">
+            <legend>Select Socket</legend>
             <div class="selector-option">
               <input class="socket-selector-button" 
                 type="radio" 
                 name="socket-selector" 
                 value="LGA-1851"
-                id="check1"
+                id="LGA-1851"
               />
-              <div><b>Intel Core Ultra<br> LGA 1851</b></div>
+              <label for="LGA-1851"><b>Intel Core Ultra<br> LGA 1851</b></label>
             </div>
             <div class="selector-option">
               <input class="socket-selector-button" 
                 type="radio" 
                 name="socket-selector" 
                 value="LGA-1700"
-                id="check1"
+                id="LGA-1700"
               />
-              <div><b>Intel (12th, 13th, 14th gen)<br> LGA 1700</b></div>
+              <label for="LGA-1700"><b>Intel (12th, 13th, 14th gen)<br> LGA 1700</b></label>
             </div>
             <div class="selector-option">
               <input class="socket-selector-button" 
                 type="radio" 
                 name="socket-selector" 
                 value="AM5"
-                id="ckeck2"
+                id="AM5"
               />
-              <div><b>AMD (7th, 8th, 9th gen)<br> AM5</b></div>
+              <label for="AM5"><b>AMD (7th, 8th, 9th gen)<br> AM5</b></label>
             </div>
             <div class="selector-option">
               <input class="socket-selector-button" 
                 type="radio" 
                 name="socket-selector" 
                 value="AM4"
-                id="ckeck3"
+                id="AM4"
               />
-              <div><b>AMD (5th gen)<br> AM4</b></div>
+              <label for="AM4"><b>AMD (5th gen)<br> AM4</b></label>
             </div> 
-          </div>
+          </fieldset>
           
           <div class="options js-motherboard-options">
           </div>
       
-          <p class="sub-heading js-cpu-section">
+          <h2 class="sub-heading js-cpu-section">
             Processor (CPU)
-          </p>
+          </h2>
           <div class="options js-cpu-options">
           </div>
       
-          <p class="sub-heading js-gpu-section">
+          <h2 class="sub-heading js-gpu-section">
             Graphics Card (GPU)
-          </p>
-          <div class="selector">
+          </h2>
+          <fieldset class="selector">
+            <legend>Select Gpu Brand</legend>
             <div class="selector-option">
               <input class="gpu-selector-button" 
                 type="radio" 
                 name="gpu-selector" 
                 value="nvidia"
-                id="check1"
+                id="nvidia"
               />
-              <div><b>NVIDIA</b></div>
+              <label for="nvidia"><b>NVIDIA</b></label>
             </div>
             <div class="selector-option">
               <input class="gpu-selector-button" 
                 type="radio" 
                 name="gpu-selector" 
                 value="AMD"
-                id="ckeck2"
+                id="AMD"
               />
-              <div><b>AMD</b></div>
+              <label for="AMD"><b>AMD</b></label>
             </div>
-          </div>
+          </fieldset>
          
           <div class="options js-gpu-options">
           </div>
       
-          <p class="sub-heading js-storage-section">
+          <h2 class="sub-heading js-storage-section">
             Storage
-          </p>
-          <div class="selector">
+          </h2>
+          <fieldset class="selector">
+            <legend>Select Storage Size</legend>
             <div class="selector-option">
               <input class="storage-size-selector-button" 
                 type="radio" 
                 name="storage-size-selector" 
                 value="4-TB"
-                id="check1"
+                id="4-TB"
               />
-              <div><b>4-TB</b></div>
+              <label for="4-TB"><b>4-TB</b></label>
             </div>
             <div class="selector-option">
               <input class="storage-size-selector-button" 
                 type="radio" 
                 name="storage-size-selector" 
                 value="2-TB"
-                id="ckeck2"
+                id="2-TB"
               />
-              <div><b>2-TB</b></div>
+              <label for="2-TB"><b>2-TB</b></label>
             </div>
             <div class="selector-option">
               <input class="storage-size-selector-button" 
                 type="radio" 
                 name="storage-size-selector" 
                 value="1-TB"
-                id="ckeck2"
+                id="1-TB"
               />
-              <div><b>1-TB</b></div>
+              <label for="1-TB"><b>1-TB</b></label>
             </div>
-          </div>
+          </fieldset>
+
           <div class="options js-storage-options">
           </div>
       
-          <p class="sub-heading js-ram-section">
+          <h2 class="sub-heading js-ram-section">
             Memory (RAM)
-          </p>
-          <div class="selector">
+          </h2>
+          <fieldset class="selector">
+            <legend>Select Memory Type</legend>
             <div class="selector-option">
               <input class="ram-selector-button" 
                 type="radio" 
                 name="ram-selector" 
                 value="DDR5"
-                id="check1"
+                id="DDR5"
               />
-              <div><b>DDR5</b></div>
+              <label for="DDR5"><b>DDR5</b></label>
             </div>
             <div class="selector-option">
               <input class="gpu-selector-button" 
                 type="radio" 
                 name="ram-selector" 
                 value="DDR4"
-                id="ckeck2"
+                id="DDR4"
               />
-              <div><b>DDR4</b></div>
+              <label for="DDR4"><b>DDR4</b></label>
             </div>
-          </div>
+          </fieldset>
           <div class="options js-memory-options">
           </div>
       
-          <p class="sub-heading js-psu-section">
+          <h2 class="sub-heading js-psu-section">
             Power Supply Unit (PSU)
-          </p>
+          </h2>
           <div class="options js-power-supply-options">
           </div>
       
-          <p class="sub-heading js-case-section">
+          <h2 class="sub-heading js-case-section">
             Case
-          </p>
+          </h2>
           <div class="options js-case-options">
           </div>
 
-          <p class="sub-heading js-cooler-section">
+          <h2 class="sub-heading js-cooler-section">
             Cooler
-          </p>
+          </h2>
           <div class="options js-cooler-options">
           </div>
-        </div>
+        </section>
         
-        <div class="section-2">
-          <p class="cost-title">
+        <section aria-labelledby="label" class="section-2">
+          <h2 id="label" class="cost-title">
             Cost Summary
-          </p>
+          </h2>
           <div class="js-section-2">
           </div>
-        </div>
+        </section>
       </div>
 
       <div class="image-box js-image-box">

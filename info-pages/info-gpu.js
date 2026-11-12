@@ -1,7 +1,11 @@
 const gpuHTML = `
+  <h1 class="title">
+    Graphics Processing Unit (GPU)
+  </h1>
+  
   <div class="gpu-image-container">
-    <img class="nvidia-logo" src="images/nvidia.png"/>
-    <img class="amd-radeon-logo" src="images/amd-radeon.png"/>
+    <img alt="nvidia logo" class="nvidia-logo" src="images/nvidia.png"/>
+    <img alt="amd radeon logo" class="amd-radeon-logo" src="images/amd-radeon.png"/>
   </div>
 
   <p>
