@@ -50,13 +50,25 @@ motherboardListButtons.forEach ((button) => {
 
 let motherboardCost = 0;
 
+const motherboardSidebarBtn = document.querySelector('.js-motherboard-sidebar-container');
+
 motherboard.forEach ((product) => {
   motherboardListButtons.forEach ((button) => {
     button.addEventListener('click', () => {
-      if ([product.name, product.socket].every(value => button.innerText.includes(value))) {
+      if ([product.name, product.socket, product.size].every(value => button.textContent.includes(value))) {
         motherboardCost = product.price;
         costCalculations ();
-        document.querySelector('.js-motherboard-sidebar-container').innerHTML = `<img src="${product.image}" alt="selected motherboard">`
+        
+        motherboardSidebarBtn.innerHTML = '<div class="spinner"></div><p>Loading image...</p>';
+
+        const motherboardImg = new Image();
+        motherboardImg.alt = "selected motherboard";
+        motherboardImg.onload = () => {
+          motherboardSidebarBtn.innerHTML = "";
+          motherboardSidebarBtn.appendChild(motherboardImg);
+        }
+
+        motherboardImg.src = product.image;
       }
     });
    });
@@ -65,7 +77,7 @@ motherboard.forEach ((product) => {
 document.querySelector('.js-motherboard-sidebar-container').addEventListener('click', () => {
   document.querySelector('.js-motherboard-section').scrollIntoView({
     behavior: 'smooth',
-    block: 'center'
+    block: 'start'
   })
 })
 
@@ -122,13 +134,25 @@ cpuListButtons.forEach ((button) => {
 
 let processorCost = 0;
 
+const cpuSidebarBtn = document.querySelector('.js-cpu-sidebar-container');
+
 processor.forEach ((product) => {
   cpuListButtons.forEach ((button) => {
     button.addEventListener ('click', () => {
-      if ([product.brand, product.name, product.core, product.socket].every(value => button.innerText.includes(value))) {
+      if ([product.brand, product.name, product.core, product.socket].every(value => button.textContent.includes(value))) {
         processorCost = product.price;
         costCalculations ();
-        document.querySelector('.js-cpu-sidebar-container').innerHTML = `<img src="${product.image}" alt="selected processor">`
+        
+        cpuSidebarBtn.innerHTML = '<div class="spinner"></div><p>Loading image...</p>';
+
+        const cpuImg = new Image();
+        cpuImg.alt = "selected processor";
+        cpuImg.onload = () => {
+          cpuSidebarBtn.innerHTML = "";
+          cpuSidebarBtn.appendChild(cpuImg);
+        }
+
+        cpuImg.src = product.image;
       }
     })
   });
@@ -137,7 +161,7 @@ processor.forEach ((product) => {
 document.querySelector('.js-cpu-sidebar-container').addEventListener('click', () => {
   document.querySelector('.js-cpu-section').scrollIntoView({
     behavior: 'smooth',
-    block: 'center'
+    block: 'start'
   })
 })
 
@@ -195,13 +219,25 @@ gpuListButtons.forEach ((button) => {
 
 let graphicsCardCost = 0;
 
+const gpuSidebarBtn = document.querySelector('.js-gpu-sidebar-container');
+
 graphicsCard.forEach ((product) => {
   gpuListButtons.forEach ((button) => {
     button.addEventListener ('click', () => {
-      if ([product.manufacturer, product.brand, product.name].every(value => button.innerText.includes(value))) {
+      if ([product.manufacturer, product.brand, product.name].every(value => button.textContent.includes(value))) {
         graphicsCardCost = product.price;
         costCalculations ();
-        document.querySelector('.js-gpu-sidebar-container').innerHTML = `<img src="${product.image}" alt="selected graphics card">`
+        
+        gpuSidebarBtn.innerHTML = '<div class="spinner"></div><p>Loading image...</p>';
+
+        const gpuImg = new Image();
+        gpuImg.alt = "selected graphics card";
+        gpuImg.onload = () => {
+          gpuSidebarBtn.innerHTML = "";
+          gpuSidebarBtn.appendChild(gpuImg);
+        }
+
+        gpuImg.src = product.image;
       }
     });
   });
@@ -210,7 +246,7 @@ graphicsCard.forEach ((product) => {
 document.querySelector('.js-gpu-sidebar-container').addEventListener('click', () => {
   document.querySelector('.js-gpu-section').scrollIntoView({
     behavior: 'smooth',
-    block: 'center'
+    block: 'start'
   })
 })
 
@@ -265,13 +301,25 @@ storageListButtons.forEach ((button) => {
 
 let storageCost = 0;
 
+const storageSidebarBtn = document.querySelector('.js-storage-sidebar-container');
+
 storage.forEach ((product) => {
   storageListButtons.forEach ((button) => {
     button.addEventListener ('click', () => {
-      if ([product.name, product.space, product.formFactor, product.interface].every(value => button.innerText.includes(value))) {
+      if ([product.name, product.space, product.formFactor, product.interface].every(value => button.textContent.includes(value))) {
         storageCost = product.price;
         costCalculations ();
-        document.querySelector('.js-storage-sidebar-container').innerHTML = `<img src="${product.image}" alt="selected storage">`
+      
+        storageSidebarBtn.innerHTML = '<div class="spinner"></div><p>Loading image...</p>';
+
+        const storageImg = new Image();
+        storageImg.alt = "selected storage";
+        storageImg.onload = () => {
+          storageSidebarBtn.innerHTML = "";
+          storageSidebarBtn.appendChild(storageImg);
+        }
+
+        storageImg.src = product.image;
       }
     });
   });
@@ -280,7 +328,7 @@ storage.forEach ((product) => {
 document.querySelector('.js-storage-sidebar-container').addEventListener('click', () => {
   document.querySelector('.js-storage-section').scrollIntoView({
     behavior: 'smooth',
-    block: 'center'
+    block: 'start'
   })
 })
 
@@ -336,13 +384,25 @@ memoryListButtons.forEach ((button) => {
 
 let memoryCost = 0;
 
+const ramSidebarBtn = document.querySelector('.js-ram-sidebar-container');
+
 memory.forEach ((product) => {
   memoryListButtons.forEach ((button) => {
     button.addEventListener ('click', () => {
-      if ([product.name, product.space, product.type].every(value => button.innerText.includes(value))) {
+      if ([product.name, product.space, product.type].every(value => button.textContent.includes(value))) {
         memoryCost = product.price;
         costCalculations ();
-        document.querySelector('.js-ram-sidebar-container').innerHTML = `<img src="${product.image}" alt="selected memory">`
+      
+        ramSidebarBtn.innerHTML = '<div class="spinner"></div><p>Loading image...</p>';
+
+        const ramImg = new Image();
+        ramImg.alt = "selected memory";
+        ramImg.onload = () => {
+          ramSidebarBtn.innerHTML = "";
+          ramSidebarBtn.appendChild(ramImg);
+        }
+
+        ramImg.src = product.image;
       }
     });
   });
@@ -351,7 +411,7 @@ memory.forEach ((product) => {
 document.querySelector('.js-ram-sidebar-container').addEventListener('click', () => {
   document.querySelector('.js-ram-section').scrollIntoView({
     behavior: 'smooth',
-    block: 'center'
+    block: 'start'
   })
 })
 
@@ -390,13 +450,25 @@ powerSupplyListButtons.forEach ((button) => {
 
 let powerSupplyCost = 0;
 
+const psuSidebarBtn = document.querySelector('.js-psu-sidebar-container');
+
 powerSupply.forEach ((product) => {
   powerSupplyListButtons.forEach ((button) => {
     button.addEventListener ('click', () => {
-      if ([product.manufacturer, product.name, product.wattage, product.efficiency, product.modular].every(value => button.innerText.includes(value))) {
+      if ([product.manufacturer, product.name, product.wattage, product.efficiency, product.modular].every(value => button.textContent.includes(value))) {
         powerSupplyCost = product.price;
         costCalculations ();
-        document.querySelector('.js-psu-sidebar-container').innerHTML = `<img src="${product.image}" alt="selected power supply">`
+
+        psuSidebarBtn.innerHTML = '<div class="spinner"></div><p>Loading image...</p>';
+
+        const psuImg = new Image();
+        psuImg.alt = "selected power supply";
+        psuImg.onload = () => {
+          psuSidebarBtn.innerHTML = "";
+          psuSidebarBtn.appendChild(psuImg);
+        }
+
+        psuImg.src = product.image;
       }
     });
   });
@@ -405,7 +477,7 @@ powerSupply.forEach ((product) => {
 document.querySelector('.js-psu-sidebar-container').addEventListener('click', () => {
   document.querySelector('.js-psu-section').scrollIntoView({
     behavior: 'smooth',
-    block: 'center'
+    block: 'start'
   })
 })
 
@@ -444,13 +516,25 @@ caseListButtons.forEach ((button) => {
 
 let caseCost = 0 ;
 
+const caseSidebarBtn = document.querySelector('.js-case-sidebar-container');
+
 caseTower.forEach ((product) => {
   caseListButtons.forEach ((button) => {
     button.addEventListener ('click', () => {
-      if ([product.name, product.type].every(value => button.innerText.includes(value))) {
+      if ([product.name, product.type].every(value => button.textContent.includes(value))) {
         caseCost = product.price;
         costCalculations ();
-        document.querySelector('.js-case-sidebar-container').innerHTML = `<img src="${product.image}" alt="selected case">`
+
+        caseSidebarBtn.innerHTML = '<div class="spinner"></div><p>Loading image...</p>';
+
+        const caseImg = new Image();
+        caseImg.alt = "selected case";
+        caseImg.onload = () => {
+          caseSidebarBtn.innerHTML = "";
+          caseSidebarBtn.appendChild(caseImg);
+        }
+
+        caseImg.src = product.image;
       }
     });
   });
@@ -459,7 +543,7 @@ caseTower.forEach ((product) => {
 document.querySelector('.js-case-sidebar-container').addEventListener('click', () => {
   document.querySelector('.js-case-section').scrollIntoView({
     behavior: 'smooth',
-    block: 'center'
+    block: 'start'
   })
 })
 
@@ -501,13 +585,25 @@ coolersListButtons.forEach ((button) => {
 
 let coolerCost = 0;
 
+const coolerSidebarBtn = document.querySelector('.js-cooler-sidebar-container');
+
 coolers.forEach ((product) => {
   coolersListButtons.forEach ((button) => {
     button.addEventListener('click', () => {
-      if ([product.manufacturer, product.name].every(value => button.innerText.includes(value))) {
+      if ([product.manufacturer, product.name].every(value => button.textContent.includes(value))) {
         coolerCost = product.price;
         costCalculations ();
-        document.querySelector('.js-cooler-sidebar-container').innerHTML = `<img src="${product.image}" alt="selected cooler">`
+
+        coolerSidebarBtn.innerHTML = '<div class="spinner"></div><p>Loading image...</p>';
+
+        const coolerImg = new Image();
+        coolerImg.alt = "selected cooler";
+        coolerImg.onload = () => {
+          coolerSidebarBtn.innerHTML = "";
+          coolerSidebarBtn.appendChild(coolerImg);
+        }
+
+        coolerImg.src = product.image;
       }
     });
   });
@@ -516,7 +612,7 @@ coolers.forEach ((product) => {
 document.querySelector('.js-cooler-sidebar-container').addEventListener('click', () => {
   document.querySelector('.js-cooler-section').scrollIntoView({
     behavior: 'smooth',
-    block: 'center'
+    block: 'start'
   })
 })
 
@@ -619,7 +715,7 @@ document.querySelector('.js-section-2').innerHTML = costSummaryHTML;
 }
 
 function formatCurrency (cost) {
-  let costString = cost.toLocaleString("en-IN", {style:"currency", currency: "INR", maximumFractionDigits: 0 });
+  const costString = cost.toLocaleString("en-IN", {style:"currency", currency: "INR", maximumFractionDigits: 0 });
   return costString.substring(1)
 }
 
@@ -635,7 +731,9 @@ document.querySelectorAll('.js-sidebar-button').forEach ((button) => {
       </button>
     </div>
     `;
-    document.querySelector('.js-close-button').focus()
+    document.querySelector('.js-close-button').focus({
+      preventScroll: true
+    });
     document.querySelector('.js-close-button').addEventListener ('click', () => {
       document.querySelector('.js-image-box').innerHTML = '';
     });
